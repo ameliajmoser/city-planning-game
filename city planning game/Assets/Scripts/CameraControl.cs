@@ -17,11 +17,14 @@ public class CameraControl : MonoBehaviour
     Vector3 zoomOffset;
     Vector3 targetPos;
 
+    private float minCameraDistance = 3;
+    private float maxCameraDistance = 30;
+
     // Start is called before the first frame update
     void Start()
     {
         // Set camera offset from object
-        cameraOffset = new Vector3( 0, 5, -8 );
+        cameraOffset = new Vector3( 0, 5, -8);
 
         // Get target position to rotate around
         if ( target == null ) {
@@ -31,7 +34,7 @@ public class CameraControl : MonoBehaviour
         }
 
         // Set transform rotation and position
-        transform.rotation = Quaternion.Euler( 15, 0, 0 );
+        transform.rotation = Quaternion.Euler( 25, 0, 0 );
         transform.position = targetPos + cameraOffset;
     }
 
@@ -48,13 +51,18 @@ public class CameraControl : MonoBehaviour
 
         // Get scroll input and update offset
         float mouseScroll = Input.GetAxis( "Mouse ScrollWheel" );
+        if (Mathf.Approximately(mouseScroll, 0)){
+            //switch to key input if scroll wheel is none
+            mouseScroll = Input.GetAxis("Vertical");
+            //decrease speed to compensate for held keys
+            zoomOffset /= 10;
+        }
 
-        if ( mouseScroll > 0 ) {
+        if ( mouseScroll > 0 && cameraOffset.magnitude > minCameraDistance) {
             cameraOffset -= zoomOffset;
-        } else if ( mouseScroll < 0 ) {
+        } else if ( mouseScroll < 0 && cameraOffset.magnitude < maxCameraDistance) {
             cameraOffset += zoomOffset;
         }
-        
         // Update camera position
         transform.position = targetPos + cameraOffset;
     }
