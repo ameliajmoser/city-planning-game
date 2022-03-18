@@ -29,7 +29,7 @@ public class MouseInput : MonoBehaviour
     }
     private void CheckClickHoldEvent()
     {
-        if(Input.GetMouseButton(0)){
+        if(Input.GetMouseButton(0)  && !EventSystem.current.IsPointerOverGameObject()){
             var pos = RaycastGround();
             if (pos != null){
                 OnMouseHold?.Invoke(pos.Value);
@@ -40,7 +40,7 @@ public class MouseInput : MonoBehaviour
 
     private void CheckClickUpEvent()
     {
-        if(Input.GetMouseButtonUp(0)){
+        if(Input.GetMouseButtonUp(0) && !EventSystem.current.IsPointerOverGameObject()){
             OnMouseUp?.Invoke();
         }
 
@@ -48,7 +48,7 @@ public class MouseInput : MonoBehaviour
 
     private void CheckClickDownEvent()
     {
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()){
             var pos = RaycastGround();
             if (pos != null){
                 OnMouseDown?.Invoke(pos.Value);
