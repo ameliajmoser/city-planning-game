@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 7921071128359268359}
   - component: {fileID: 7921071128359268358}
   m_Layer: 5
-  m_Name: HouseButton
+  m_Name: BuildingButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
