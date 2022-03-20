@@ -20,6 +20,8 @@ public class CameraControl : MonoBehaviour
     private float minCameraDistance = 3;
     private float maxCameraDistance = 30;
 
+    private int UILayer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,9 @@ public class CameraControl : MonoBehaviour
         // Set transform rotation and position
         transform.rotation = Quaternion.Euler( 25, 0, 0 );
         transform.position = targetPos + cameraOffset;
+
+        // Set UILayer
+        UILayer = LayerMask.NameToLayer("UI");
     }
 
     // Update is called once per frame
@@ -50,7 +55,12 @@ public class CameraControl : MonoBehaviour
         zoomOffset = new Vector3( ( X / 10 ), ( Y / 10 ), ( Z / 10 ) );
 
         // Get scroll input and update offset
-        float mouseScroll = Input.GetAxis( "Mouse ScrollWheel" );
+        float mouseScroll = 0;
+        if ( !Util.IsPointerOverLayer( UILayer ) )
+        {
+            mouseScroll = Input.GetAxis( "Mouse ScrollWheel" );
+        }
+
         if (Mathf.Approximately(mouseScroll, 0)){
             //switch to key input if scroll wheel is none
             mouseScroll = Input.GetAxis("Vertical");
