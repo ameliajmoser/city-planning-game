@@ -34,5 +34,14 @@ public class Util : MonoBehaviour
         EventSystem.current.RaycastAll( eventData, raysastResults );
         return raysastResults;
     }
- 
+
+    // Following method is used to retrive the relative path
+    public static string GetPath()
+    {
+    #if UNITY_EDITOR
+        return Application.dataPath + "/Resources/";
+    #else
+        return Application.dataPath + '/';
+    #endif
+    }
 }

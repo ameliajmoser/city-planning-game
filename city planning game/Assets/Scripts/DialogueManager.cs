@@ -26,8 +26,18 @@ public class DialogueManager : MonoBehaviour {
 	// Stop coroutine
 	private bool _stopSpawn;
 
+	// List of characters to select tweet from
+	private List<Character> characters;
+
 	void Awake ()
 	{
+		// Init characters
+		characters = new List<Character>();
+		characters.Add( new Character( "concerned-parent" ) );
+		characters.Add( new Character( "not-for-profit" ) );
+		characters.Add( new Character( "school-board" ) );
+		characters.Add( new Character( "union-leader" ) );
+
 		// Dialogue container
 		containerRectTrans = dialogueContainer.GetComponent<RectTransform>();
 
@@ -74,11 +84,15 @@ public class DialogueManager : MonoBehaviour {
 		CheckContainerLength();
 
 		// Update text
-		// TODO: update text from xml random for now
 		// TODO: update dialogue box profile picture
+
+		// For now grab random character
+		Character character = GetRandomCharacter();
+		Character.Tweet tweet = character.GetRandomTweet();
+
 		var dialogue = newBox.GetComponent<Dialogue>();
-		dialogue.messageHeader.text = "TEST HEADER";
-		dialogue.messageBody.text = "TEST BODY";
+		dialogue.messageHeader.text = tweet.header;
+		dialogue.messageBody.text = tweet.body;
 
 		// Push scroll bar to bottom of feed
 		GameObject.Find("ScrollRect").GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
@@ -105,5 +119,11 @@ public class DialogueManager : MonoBehaviour {
 	public void SetSpawn( bool stopSpawn )
 	{
 		_stopSpawn = stopSpawn;
+	}
+
+	private Character GetRandomCharacter()
+	{
+		int randInt = Random.Range( 0, characters.Count - 1 );
+		return characters[randInt];
 	}
 }
