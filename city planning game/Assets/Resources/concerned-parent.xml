@@ -1,0 +1,21 @@
+<character>
+    <name>Concerned Parent</name>
+    <sprite>FILE_PATH</sprite>
+    <tweets>
+        <random>
+            <tweet>
+                What great weather today!
+            </tweet>
+            <tweet>
+                Wow, there is a lot going on today.
+            </tweet>
+            <tweet>
+                I think I'm going to go for a walk around the city today.
+            </tweet>
+        </random>
+        <good>
+        </good>
+        <bad>
+        </bad>
+    </tweets>
+</character>
