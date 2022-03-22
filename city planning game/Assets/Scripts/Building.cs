@@ -16,10 +16,12 @@ public class Building : MonoBehaviour
     public List<BuildingAffinity> affinities = new List<BuildingAffinity>();
 
     // Building object data
+    public Rigidbody rigidbody;
     public GameObject radius;
     public TMP_Text points;
 
     private int currPoints;
+    private int numCollisions;
 
     [SerializeField]
     public BuildingType building = BuildingType.Default;
@@ -49,6 +51,7 @@ public class Building : MonoBehaviour
         buildingID = System.Guid.NewGuid().ToString();
         currState = PlacementState.Hover;
         currPoints = 0;
+        numCollisions = 0;
 
         radius.SetActive( true );
 
@@ -59,8 +62,19 @@ public class Building : MonoBehaviour
         radius.transform.localScale = new Vector3( affinityRadius, affinityRadius, 0 );
     }
 
-    // TODO: create update method
     // TODO: if building is in hover state, constantly check for surrounding buildings and update points value
+    
+    void OnCollisionEnter()
+    {
+        numCollisions++;
+        Debug.Log(numCollisions);
+    }
+
+    void OnCollisionExit()
+    {
+        numCollisions--;
+        Debug.Log(numCollisions);
+    }
 
     public void PlaceBuilding()
     {
@@ -73,5 +87,12 @@ public class Building : MonoBehaviour
     public int getPoints()
     {
         return ( currPoints );
+    }
+
+    public bool isColliding() {
+        if(numCollisions > 0) {
+            return true;
+        }
+        return false;
     }
 }

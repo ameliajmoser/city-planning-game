@@ -46,8 +46,8 @@ public class PlacementController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hitInfo;
-        int layerMask = 1 << 6;
-        if (Physics.Raycast(ray, out hitInfo, layerMask))
+        int layerMask = LayerMask.GetMask("Ground");
+        if (Physics.Raycast(ray, out hitInfo, 100.0f, layerMask))
         {
             currentPlaceableObject.transform.position = hitInfo.point;
             currentPlaceableObject.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitInfo.normal);
@@ -66,11 +66,16 @@ public class PlacementController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             var building = currentPlaceableObject.GetComponent<Building>();
-            building.PlaceBuilding();
+            
+            if(!building.isColliding()) {
+                building.PlaceBuilding();
 
-            // TODO: get building points and send to game manager to update player score
+                // TODO: get building points and send to game manager to update player score
 
-            currentPlaceableObject = null;
+                currentPlaceableObject = null;
+            }
+            
+
         }
     }
 }
