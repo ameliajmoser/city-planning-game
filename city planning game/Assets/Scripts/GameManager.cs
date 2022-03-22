@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     private void HandleMouseClick(Vector3 pos)
     {
         Debug.Log(pos);
-        PlaceGameObject(testCube, pos);
+        // PlaceGameObject(testCube, pos);
 
         
     }
@@ -28,10 +28,10 @@ public class GameManager : MonoBehaviour
         
     }
 
-    private void PlaceGameObject(GameObject obj, Vector3 pos){
-        Instantiate(obj, pos, Quaternion.identity);
-    }
-    private void PlaceBuilding(Building building, Vector3 pos){
+    // private void PlaceGameObject(GameObject obj, Vector3 pos){
+    //     Instantiate(obj, pos, Quaternion.identity);
+    // }
+    // private void PlaceBuilding(Building building, Vector3 pos){
         
-    }
+    // }
 }
