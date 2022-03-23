@@ -17,8 +17,8 @@ public class CameraControl : MonoBehaviour
     Vector3 zoomOffset;
     Vector3 targetPos;
 
-    private float minCameraDistance = 3;
-    private float maxCameraDistance = 30;
+    private float minCameraDistance = 5;
+    private float maxCameraDistance = 60;
 
     private int UILayer;
 
@@ -52,25 +52,15 @@ public class CameraControl : MonoBehaviour
         Z = cameraPos.position.z - targetPos.z;
 
         // Set zoom offset
-        zoomOffset = new Vector3( ( X / 10 ), ( Y / 10 ), ( Z / 10 ) );
+        zoomOffset = new Vector3( ( X / 200 ), ( Y / 200 ), ( Z / 200 ) );
 
-        // Get scroll input and update offset
-        float mouseScroll = 0;
-        if ( !Util.IsPointerOverLayer( UILayer ) )
-        {
-            mouseScroll = Input.GetAxis( "Mouse ScrollWheel" );
-        }
+        // Get zoom input 
+        float zoomInput = Input.GetAxis("Vertical");
 
-        if (Mathf.Approximately(mouseScroll, 0)){
-            //switch to key input if scroll wheel is none
-            mouseScroll = Input.GetAxis("Vertical");
-            //decrease speed to compensate for held keys
-            zoomOffset /= 10;
-        }
-
-        if ( mouseScroll > 0 && cameraOffset.magnitude > minCameraDistance) {
+        //update offset
+        if ( zoomInput > 0 && cameraOffset.magnitude > minCameraDistance) {
             cameraOffset -= zoomOffset;
-        } else if ( mouseScroll < 0 && cameraOffset.magnitude < maxCameraDistance) {
+        } else if ( zoomInput < 0 && cameraOffset.magnitude < maxCameraDistance) {
             cameraOffset += zoomOffset;
         }
         // Update camera position
