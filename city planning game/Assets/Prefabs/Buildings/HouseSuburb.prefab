@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 505161811782997176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.378, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5076, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6262953333801497772}
   m_RootOrder: 0
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 2538615943550538286}
   - component: {fileID: 6214605086695678209}
   m_Layer: 7
-  m_Name: HouseSmall
+  m_Name: HouseSuburb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,12 +130,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingID: 0
-  affinityRadius: 10
+  affinityRadius: 7
   affinities: []
   rigidbody: {fileID: 0}
   radius: {fileID: 3792663428270404345}
   points: {fileID: 2808886467738296294}
-  buildingType: 1
+  buildingType: 2
 --- !u!65 &2538615943550538286
 BoxCollider:
   m_ObjectHideFlags: 0

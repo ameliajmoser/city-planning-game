@@ -24,7 +24,7 @@ public class Building : MonoBehaviour
     private int numCollisions;
 
     [SerializeField]
-    public BuildingType building = BuildingType.Default;
+    public BuildingType buildingType = BuildingType.Default;
     public enum BuildingType
     {
         Default,
@@ -67,13 +67,13 @@ public class Building : MonoBehaviour
     void OnCollisionEnter()
     {
         numCollisions++;
-        Debug.Log(numCollisions);
+        // Debug.Log(numCollisions);
     }
 
     void OnCollisionExit()
     {
         numCollisions--;
-        Debug.Log(numCollisions);
+        // Debug.Log(numCollisions);
     }
 
     public void PlaceBuilding()
