@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Xml;
 using System.Xml.Serialization;
 
-public class Character : MonoBehaviour
+public class Character
 {
     public struct Tweet
     {
@@ -37,7 +37,6 @@ public class Character : MonoBehaviour
     {
         xmlDoc = new XmlDocument();
         string filePath = Util.GetPath() + mFileName + ".xml";
-        Debug.Log( filePath );
 
         if ( System.IO.File.Exists( filePath ) )
         {
