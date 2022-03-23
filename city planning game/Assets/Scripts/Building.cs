@@ -52,7 +52,6 @@ public class Building : MonoBehaviour
         currState = PlacementState.Hover;
         currPoints = 0;
         numCollisions = 0;
-
         radius.SetActive( true );
 
         // TODO: fix text
@@ -64,6 +63,9 @@ public class Building : MonoBehaviour
 
     // TODO: if building is in hover state, constantly check for surrounding buildings and update points value
     
+    void OnGUI() {
+        points.transform.LookAt(Camera.main.transform);
+    }
     void OnCollisionEnter()
     {
         numCollisions++;
@@ -95,4 +97,5 @@ public class Building : MonoBehaviour
         }
         return false;
     }
+
 }
