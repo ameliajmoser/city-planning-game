@@ -1,0 +1,24 @@
+<character>
+    <name>David</name>
+    <sprite>FILE_PATH</sprite>
+    <tweets>
+        <random>
+            <tweet>
+                There's a walk at city hall tonight to raise awareness for poor housing conditions. Would love to see you there!
+            </tweet>
+            <tweet>
+                We need sustainability! That means decent housing everywhere!!
+            </tweet>
+            <tweet>
+                Holding an open hall at the school to talk about the need for new parks and community centers.
+            </tweet>
+            <tweet>
+                What happens when they run out of space? Are our homes and schools and parks next to go?!
+            </tweet>
+        </random>
+        <good>
+        </good>
+        <bad>
+        </bad>
+    </tweets>
+</character>

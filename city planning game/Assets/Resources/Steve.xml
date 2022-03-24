@@ -1,0 +1,24 @@
+<character>
+    <name>Steve</name>
+    <sprite>FILE_PATH</sprite>
+    <tweets>
+        <random>
+            <tweet>
+                The weather is so nice today! I wish I had a park nearby to enjoy it at.
+            </tweet>
+            <tweet>
+                My son would love to join a baseball team, but the nearest park is too far away!
+            </tweet>
+            <tweet>
+                I sure hope they don't let more oil plants get built any closer. I can already see them from my front door!
+            </tweet>
+            <tweet>
+                I think I'll go for a walk around the city. There's so many new buildings I haven't seen yet.
+            </tweet>
+        </random>
+        <good>
+        </good>
+        <bad>
+        </bad>
+    </tweets>
+</character>

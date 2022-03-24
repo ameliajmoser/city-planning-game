@@ -1,0 +1,24 @@
+<character>
+    <name>Nancy</name>
+    <sprite>FILE_PATH</sprite>
+    <tweets>
+        <random>
+            <tweet>
+                My daughter would love to meet up with other girls for crafts and games. We need a community center!
+            </tweet>
+            <tweet>
+                The city's growing so fast the buses are all backed up! We need closer work or better transportation.
+            </tweet>
+            <tweet>
+                Took my daughter to the park cause she loves being outside. But it was too full! How can we get more parks around here!
+            </tweet>
+            <tweet>
+                Its so difficult to find decent housing around here. Why is everything so packed together!
+            </tweet>
+        </random>
+        <good>
+        </good>
+        <bad>
+        </bad>
+    </tweets>
+</character>

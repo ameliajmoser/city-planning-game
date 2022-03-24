@@ -1,0 +1,24 @@
+<character>
+    <name>Mark</name>
+    <sprite>FILE_PATH</sprite>
+    <tweets>
+        <random>
+            <tweet>
+                Opening up a new office tower soon. Come work for the best tech company around!
+            </tweet>
+            <tweet>
+                Launching the new GrapePhone tomorrow! Make sure to get to stores early before they sell out!
+            </tweet>
+            <tweet>
+                I know I'm new to the city, but I love it and love being one you. My new home out on mansion boulevard is almost done!
+            </tweet>
+            <tweet>
+                Started this company in my dorm room and now we're here. Look what a bit of money and quick growth can do!!
+            </tweet>
+        </random>
+        <good>
+        </good>
+        <bad>
+        </bad>
+    </tweets>
+</character>

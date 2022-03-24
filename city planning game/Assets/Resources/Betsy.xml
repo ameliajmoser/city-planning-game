@@ -1,0 +1,24 @@
+<character>
+    <name>Betsy</name>
+    <sprite>FILE_PATH</sprite>
+    <tweets>
+        <random>
+            <tweet>
+                The summer is fast approaching. Make sure to vote for more school funding for our great summer school programs!
+            </tweet>
+            <tweet>
+                The city is growing so quickly we need more schools soon. And not just in one area!
+            </tweet>
+            <tweet>
+                Our school car wash fundraiser its tomorrow! Come stop by and support your local community school!
+            </tweet>
+            <tweet>
+                Too many of our kids are forced to trek across the city just to go to school. We need more schools closer to home!
+            </tweet>
+        </random>
+        <good>
+        </good>
+        <bad>
+        </bad>
+    </tweets>
+</character>

@@ -1,0 +1,33 @@
+<character>
+    <name>Weather Channel</name>
+    <sprite>FILE_PATH</sprite>
+    <tweets>
+        <random>
+            <tweet>
+                What a great day it is to be in CITY BUILDER!
+            </tweet>
+            <tweet>
+                It's sunny and 75 and is likely to stay that way all week folks. Enjoy it while you can!
+            </tweet>
+            <tweet>
+                Expect brisk winds to blow through overnight bringing slightly cooler temps in the morning.
+            </tweet>
+            <tweet>
+                The sun's out in full force. Lather up with sunscreen if you're out on the river!
+            </tweet>
+            <tweet>
+                We're tracking a small storm moving in from the south but it should slip right by us.
+            </tweet>
+            <tweet>
+                How do you find out the weather when you're on vacation.......go outside and look up! Enjoy the weekend!
+            </tweet>
+            <tweet>
+                Perfect weather to head to the river during the next few days! Be safe out there folks.
+            </tweet>
+        </random>
+        <good>
+        </good>
+        <bad>
+        </bad>
+    </tweets>
+</character>
