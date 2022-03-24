@@ -56,14 +56,56 @@ public class Building : MonoBehaviour
         numCollisions = 0;
 
         // Set radius of sensing radius
-        radius.transform.localScale = new Vector3( affinityRadius, affinityRadius, 0 );
+        radius.transform.localScale = new Vector3( affinityRadius * 2, affinityRadius * 2, 0 );
         if (startPlaced){
             this.PlaceBuilding();
         }
     }
 
     // TODO: if building is in hover state, constantly check for surrounding buildings and update points value
-    
+    void Update()
+    {
+        if ( currState == PlacementState.Hover )
+        {
+            currPoints = ComputeScore();
+            points.text = currPoints.ToString();
+        }
+    }
+
+    private int ComputeScore()
+    {
+        int score = 0;
+        int layerMask = LayerMask.GetMask("Buildings");
+        
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, affinityRadius, layerMask);
+        
+        foreach (var hitCollider in hitColliders)
+        {
+            if ( hitCollider.gameObject != transform.gameObject )
+            {
+                GameObject hitBuilding = hitCollider.gameObject;
+                
+                BuildingType type = hitBuilding.GetComponent<Building>().buildingType;
+                score += GetBuildingAffinity( type );
+            }
+        }
+
+        return ( score );
+    }
+
+    private int GetBuildingAffinity( BuildingType type )
+    {
+        foreach( var buildingAffinity in affinities )
+        {
+            if ( buildingAffinity.buildingType == type )
+            {
+                return ( buildingAffinity.points );
+            }
+        }
+
+        return ( 0 );
+    }
+
     void OnGUI() {
         points.transform.LookAt(Camera.main.transform);
     }
@@ -79,12 +121,14 @@ public class Building : MonoBehaviour
         // Debug.Log(numCollisions);
     }
 
-    public void PlaceBuilding()
+    public int PlaceBuilding()
     {
         radius.SetActive( false );
         points.enabled = false;
+        currState = PlacementState.Placed;
 
-        // TODO: calculate points from buildings within radius
+        currPoints = ComputeScore();
+        return ( currPoints );
     }
 
     public int getPoints()

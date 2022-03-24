@@ -130,8 +130,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingID: 0
-  affinityRadius: 15
-  affinities: []
+  startPlaced: 0
+  affinityRadius: 7
+  affinities:
+  - buildingType: 1
+    points: -1
+  - buildingType: 2
+    points: -1
+  - buildingType: 3
+    points: -2
+  - buildingType: 4
+    points: -1
+  - buildingType: 5
+    points: -1
+  - buildingType: 6
+    points: -1
+  - buildingType: 7
+    points: 1
+  - buildingType: 8
+    points: 1
   rigidbody: {fileID: 0}
   radius: {fileID: 3792663428270404345}
   points: {fileID: 2808886467738296294}
@@ -274,7 +291,7 @@ RectTransform:
   m_GameObject: {fileID: 6126717085523157203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6262953333801497772}
   m_RootOrder: 2

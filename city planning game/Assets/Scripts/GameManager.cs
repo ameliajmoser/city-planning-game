@@ -9,6 +9,12 @@ public class GameManager : MonoBehaviour
 
     public Building heldBuilding;
 
+    [SerializeField]
+    private GameObject scoreUIManager;
+
+    [SerializeField]
+    private GameObject playerManager;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -22,10 +28,17 @@ public class GameManager : MonoBehaviour
 
         
     }
+
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void updatePlayerScore( int amt )
+    {
+        playerManager.GetComponent<PlayerManager>().UpdateScore( amt );
+        scoreUIManager.GetComponent<UI_ProgressBar>().SetUIScore( playerManager.GetComponent<PlayerManager>().GetScore() );
     }
 
     // private void PlaceGameObject(GameObject obj, Vector3 pos){
