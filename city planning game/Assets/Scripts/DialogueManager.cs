@@ -33,18 +33,19 @@ public class DialogueManager : MonoBehaviour {
 	{
 		// Init characters
 		characters = new List<Character>();
-		characters.Add( new Character( "steve" ) ); // concerned citizen 1
-		characters.Add( new Character( "david" ) ); // not for profit leader
-		characters.Add( new Character( "betsy" ) ); // school board president
-		characters.Add( new Character( "gerald" ) ); // union leader
-		characters.Add( new Character( "mayor" ) ); //mayor marshall
-		characters.Add( new Character( "gulliver" ) ); // oil baron
-		characters.Add( new Character( "nancy" ) ); // concerned citizen 2
-		characters.Add( new Character( "marcia" ) ); // celebrity 1
-		characters.Add( new Character( "mark" ) ); //tech guy
-		characters.Add( new Character( "weather-channel" ) ); // city weather channel
-		characters.Add( new Character( "sports-channel" ) ); // city sports channel
-		characters.Add( new Character( "blank" ) );
+		// The string we pass to characters is the xml file name minus the extension
+		characters.Add( new Character( "Steve" ) ); // concerned citizen 1
+		characters.Add( new Character( "David" ) ); // not for profit leader
+		characters.Add( new Character( "Betsy" ) ); // school board president
+		characters.Add( new Character( "Gerald" ) ); // union leader
+		characters.Add( new Character( "Mayor" ) ); //mayor marshall
+		characters.Add( new Character( "Gulliver" ) ); // oil baron
+		characters.Add( new Character( "Nancy" ) ); // concerned citizen 2
+		characters.Add( new Character( "Marcia" ) ); // celebrity 1
+		characters.Add( new Character( "Mark" ) ); //tech guy
+		characters.Add( new Character( "Weather-Channel" ) ); // city weather channel
+		characters.Add( new Character( "Sports-Channel" ) ); // city sports channel
+		characters.Add( new Character( "Blank" ) );
 
 		// Dialogue container
 		containerRectTrans = dialogueContainer.GetComponent<RectTransform>();
