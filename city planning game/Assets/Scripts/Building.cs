@@ -98,4 +98,21 @@ public class Building : MonoBehaviour
         return false;
     }
 
+    public String ToString() {
+        String enumString = buildingType.ToString();
+        List<int> spaceIndeces = new List<int>();
+        for (int i = 1; i < enumString.Length; i++) {
+            if(enumString[i] >= 'A' && enumString[i] <= 'Z')
+            spaceIndeces.Add(i);
+        }
+        spaceIndeces.Add(enumString.Length);
+        String resultString = enumString;
+        if(spaceIndeces.Count > 0) {
+            resultString = enumString.Substring(0, spaceIndeces[0]);
+            for (int i = 1; i < spaceIndeces.Count; i++) {
+                resultString = resultString + " " + enumString.Substring(spaceIndeces[i-1], spaceIndeces[i] - spaceIndeces[i-1]);
+            }
+        }
+        return resultString;
+    }
 }

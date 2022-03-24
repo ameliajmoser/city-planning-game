@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 505161811782997176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.378, z: 0}
-  m_LocalScale: {x: 2.5076, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6262953333801497772}
   m_RootOrder: 0
@@ -39,7 +39,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505161811782997176}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: a27dc3b534251f64a8cc869f21c6b202, type: 3}
 --- !u!23 &4206759797157602901
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -90,11 +90,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6262953333801497772}
+  - component: {fileID: 943454527574739498}
   - component: {fileID: 3728850503334862105}
   - component: {fileID: 2538615943550538286}
   - component: {fileID: 6214605086695678209}
   m_Layer: 7
-  m_Name: HouseSuburb
+  m_Name: House Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,6 +118,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1818360609 &943454527574739498
+RotationConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008035343353864571}
+  m_Enabled: 1
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_AffectRotationX: 1
+  m_AffectRotationY: 0
+  m_AffectRotationZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 1
+  m_Sources: []
 --- !u!114 &3728850503334862105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,12 +148,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingID: 0
-  affinityRadius: 7
+  affinityRadius: 10
   affinities: []
   rigidbody: {fileID: 0}
   radius: {fileID: 3792663428270404345}
   points: {fileID: 2808886467738296294}
-  buildingType: 2
+  buildingType: 1
 --- !u!65 &2538615943550538286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -163,7 +181,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1 &3792663428270404345
 GameObject:
@@ -354,8 +372,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4280690214
+  m_fontColor: {r: 0.15, g: 0.15, b: 0.15, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
