@@ -708,6 +708,10 @@ PrefabInstance:
       value: TownHall
       objectReference: {fileID: 0}
     - target: {fileID: 3728850503334862105, guid: 530a48ff36318d846a61a341fd303313, type: 3}
+      propertyPath: startPlaced
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728850503334862105, guid: 530a48ff36318d846a61a341fd303313, type: 3}
       propertyPath: startEnabled
       value: 0
       objectReference: {fileID: 0}
