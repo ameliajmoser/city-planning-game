@@ -32,6 +32,10 @@ public class PlayerManager : MonoBehaviour
         if ( currScore > 100 ) {
             currScore = 100;
         }
+        else if ( currScore < 0 )
+        {
+            currScore = 0;
+        }
     }
 
     public int GetScore()

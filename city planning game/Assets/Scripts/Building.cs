@@ -8,6 +8,8 @@ public class Building : MonoBehaviour
 {
     public string buildingID;
 
+    [SerializeField]
+    private bool startPlaced = false;
     //dimensions of building
     [SerializeField]
     public float affinityRadius = 0;
@@ -52,13 +54,12 @@ public class Building : MonoBehaviour
         currState = PlacementState.Hover;
         currPoints = 0;
         numCollisions = 0;
-        radius.SetActive( true );
-
-        // TODO: fix text
-        points.enabled = true;
 
         // Set radius of sensing radius
         radius.transform.localScale = new Vector3( affinityRadius * 2, affinityRadius * 2, 0 );
+        if (startPlaced){
+            this.PlaceBuilding();
+        }
     }
 
     // TODO: if building is in hover state, constantly check for surrounding buildings and update points value
