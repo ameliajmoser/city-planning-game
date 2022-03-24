@@ -20,11 +20,22 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         // TODO: instantiate inventory object here
+
+        currScore = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateScore( int amt )
     {
-        // TODO: ideally we would have a check here if game manager is currently running the game (ie. not in pause or main menu)
+        currScore += amt;
+        
+        // TODO: this is just for the demo - remove this
+        if ( currScore > 100 ) {
+            currScore = 100;
+        }
+    }
+
+    public int GetScore()
+    {
+        return ( currScore );
     }
 }

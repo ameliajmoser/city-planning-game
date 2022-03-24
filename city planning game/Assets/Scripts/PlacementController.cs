@@ -12,6 +12,9 @@ public class PlacementController : MonoBehaviour
 
     private float mouseWheelRotation;
 
+    [SerializeField]
+    private GameObject gameManager;
+
     void Update()
     {
         if ( Input.GetKeyDown( KeyCode.Escape )  || Input.GetKeyDown(KeyCode.Mouse1))
@@ -54,9 +57,8 @@ public class PlacementController : MonoBehaviour
             var building = currentPlaceableObject.GetComponent<Building>();
             
             if(!building.isColliding()) {
-                building.PlaceBuilding();
-
-                // TODO: get building points and send to game manager to update player score
+                int points = building.PlaceBuilding();
+                gameManager.GetComponent<GameManager>().updatePlayerScore( points );
 
                 currentPlaceableObject = null;
             }

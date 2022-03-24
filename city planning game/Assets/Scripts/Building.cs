@@ -78,12 +78,13 @@ public class Building : MonoBehaviour
         // Debug.Log(numCollisions);
     }
 
-    public void PlaceBuilding()
+    public int PlaceBuilding()
     {
         radius.SetActive( false );
         points.enabled = false;
 
         // TODO: calculate points from buildings within radius
+        return ( 7 );
     }
 
     public int getPoints()
