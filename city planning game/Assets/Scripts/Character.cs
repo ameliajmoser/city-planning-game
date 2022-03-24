@@ -36,12 +36,9 @@ public class Character
     private void loadXML()
     {
         xmlDoc = new XmlDocument();
-        string filePath = Util.GetPath() + mFileName + ".xml";
-
-        if ( System.IO.File.Exists( filePath ) )
-        {
-            xmlDoc.Load( filePath );
-        }
+        
+        var xmlDocText = Resources.Load<TextAsset>( mFileName );
+        xmlDoc.LoadXml( xmlDocText.text );
     }
 
     private void parseXML()
