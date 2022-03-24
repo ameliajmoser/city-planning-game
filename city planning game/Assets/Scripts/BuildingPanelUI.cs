@@ -24,7 +24,7 @@ public class BuildingPanelUI : MonoBehaviour
             buildingButtonTransform.gameObject.SetActive( true );
 
             buildingButtonTransform.GetComponent<RectTransform>().anchoredPosition += new Vector2( index * 140, 0 );
-            buildingButtonTransform.Find( "Text" ).GetComponent<Text>().text = buildingPrefab.GetComponent<Building>().buildingType.ToString();
+            buildingButtonTransform.Find( "Text" ).GetComponent<Text>().text = buildingPrefab.GetComponent<Building>().ToString();
         
             buildingButtonTransform.GetComponent<Button>().onClick.AddListener( () => {
                 placementController.SetActiveBuildingType( buildingPrefab );
