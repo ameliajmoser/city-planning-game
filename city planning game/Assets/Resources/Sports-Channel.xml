@@ -1,0 +1,33 @@
+<character>
+    <name>Sports Channel</name>
+    <sprite>FILE_PATH</sprite>
+    <tweets>
+        <random>
+            <tweet>
+                What a great day to get outside and play ball!
+            </tweet>
+            <tweet>
+                Wow! We've got a lot of great games going on today in the city. 
+            </tweet>
+            <tweet>
+                Find your way to your nearest park or community center to support your community teams!
+            </tweet>
+            <tweet>
+                Make sure let your voice be heard when it comes to improving our community parks and sports facilities.
+            </tweet>
+            <tweet>
+                I kept wondering why the baseball was getting bigger.......then it hit me.
+            </tweet>
+            <tweet>
+                Sports bring people together. Get out there and play!
+            </tweet>
+            <tweet>
+                What are your thoughts on tearing Northeast Park down and replacing it with oil plants? We know ours...
+            </tweet>
+        </random>
+        <good>
+        </good>
+        <bad>
+        </bad>
+    </tweets>
+</character>

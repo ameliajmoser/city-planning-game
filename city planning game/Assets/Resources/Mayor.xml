@@ -1,0 +1,24 @@
+<character>
+    <name>Mayor</name>
+    <sprite>FILE_PATH</sprite>
+    <tweets>
+        <random>
+            <tweet>
+                What a great day to be in our great city on our great river!
+            </tweet>
+            <tweet>
+                Make sure to get your votes in for city mascot! The vote ends tomorrow!
+            </tweet>
+            <tweet>
+                Great news folks. Just got word a couple major companies are building here soon! 
+            </tweet>
+            <tweet>
+                Make sure to make it to the town hall this weekend. We want to hear each of your voices!
+            </tweet>
+        </random>
+        <good>
+        </good>
+        <bad>
+        </bad>
+    </tweets>
+</character>

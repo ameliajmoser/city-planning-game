@@ -1,16 +1,16 @@
 <character>
-    <name>Concerned Parent</name>
+    <name>blank</name>
     <sprite>FILE_PATH</sprite>
     <tweets>
         <random>
             <tweet>
-                What great weather today!
+                Add message here
             </tweet>
             <tweet>
-                Wow, there is a lot going on today.
+                Add message here
             </tweet>
             <tweet>
-                I think I'm going to go for a walk around the city today.
+                Add message here
             </tweet>
         </random>
         <good>
