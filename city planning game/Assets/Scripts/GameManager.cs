@@ -42,6 +42,15 @@ public class GameManager : MonoBehaviour
         scoreUIManager.GetComponent<UI_ProgressBar>().SetUIScore( playerManager.GetComponent<PlayerManager>().GetScore() );
     }
 
+    public bool canPlaceObject( GameObject buildingPrefab )
+    {
+        Building building = buildingPrefab.GetComponent<Building>();
+        int cost = building.cost;
+        int playerScore = playerManager.GetComponent<PlayerManager>().GetScore();
+
+        return ( cost < playerScore );
+    }
+
     // private void PlaceGameObject(GameObject obj, Vector3 pos){
     //     Instantiate(obj, pos, Quaternion.identity);
     // }
