@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         mouseInput.OnMouseDown += HandleMouseClick;
+        scoreUIManager.GetComponent<UI_ProgressBar>().SetUIScore( playerManager.GetComponent<PlayerManager>().GetScore() );
     }
 
     private void HandleMouseClick(Vector3 pos)

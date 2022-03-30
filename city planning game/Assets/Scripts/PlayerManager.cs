@@ -20,8 +20,6 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         // TODO: instantiate inventory object here
-
-        currScore = 0;
     }
 
     public void UpdateScore( int amt )
