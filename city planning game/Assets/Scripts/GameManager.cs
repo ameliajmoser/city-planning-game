@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject playerManager;
 
+    [SerializeField]
+    private GameObject buildingPannelUI;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -39,6 +42,11 @@ public class GameManager : MonoBehaviour
     {
         playerManager.GetComponent<PlayerManager>().UpdateScore( amt );
         scoreUIManager.GetComponent<UI_ProgressBar>().SetUIScore( playerManager.GetComponent<PlayerManager>().GetScore() );
+    }
+
+    public void removeButton( Transform transform )
+    {
+        buildingPannelUI.GetComponent<BuildingPanelUI>().removeButton( transform );
     }
 
     // private void PlaceGameObject(GameObject obj, Vector3 pos){

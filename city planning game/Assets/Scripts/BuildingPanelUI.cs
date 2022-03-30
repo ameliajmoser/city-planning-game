@@ -12,25 +12,95 @@ public class BuildingPanelUI : MonoBehaviour
     [SerializeField]
     private List<GameObject> buildingPrefabs;
 
+    List<Transform> buttons;
+    Transform buildingButtonTemplate;
+
+    [SerializeField]
+    private int MAX_INVENTORY_SIZE = 7;
+
     private void Awake()
     {
-        Transform buildingButtonTemplate = transform.Find( "BuildingButtonTemplate" );
+        buttons = new List<Transform>();
+
+        buildingButtonTemplate = transform.Find( "BuildingButtonTemplate" );
         buildingButtonTemplate.gameObject.SetActive( false );
 
         int index = 0;
         foreach ( GameObject buildingPrefab in buildingPrefabs )
         {
-            Transform buildingButtonTransform = Instantiate( buildingButtonTemplate, transform );
-            buildingButtonTransform.gameObject.SetActive( true );
+            if ( index > MAX_INVENTORY_SIZE - 1 )
+            {
+                break;
+            }
 
-            buildingButtonTransform.GetComponent<RectTransform>().anchoredPosition += new Vector2( index * 140, 0 );
-            buildingButtonTransform.Find( "Text" ).GetComponent<Text>().text = buildingPrefab.GetComponent<Building>().ToString();
-        
-            buildingButtonTransform.GetComponent<Button>().onClick.AddListener( () => {
-                placementController.SetActiveBuildingType( buildingPrefab );
-            } );
-
+            addButton( buildingPrefab ); 
             index++;
         }
+    }
+
+    private void addButton( GameObject buildingPrefab )
+    {
+        Transform buildingButtonTransform = Instantiate( buildingButtonTemplate, transform );
+        buildingButtonTransform.gameObject.SetActive( true );
+        buttons.Add( buildingButtonTransform );
+
+        buildingButtonTransform.Find( "Text" ).GetComponent<Text>().text = buildingPrefab.GetComponent<Building>().ToString();
+    
+        buildingButtonTransform.GetComponent<Button>().onClick.AddListener( () => {
+            placementController.SetActiveBuildingType( buildingPrefab, buildingButtonTransform );
+        } );
+    }
+
+    public void removeButton( Transform transform )
+    {
+        Destroy( transform.gameObject );
+
+        // TODO: this is just temporary unitl we have levels
+        addRandomBuilding();
+    }
+
+    public void addRandomBuilding()
+    {
+        int randInt = Random.Range( 0, buildingPrefabs.Count - 1 );
+        GameObject prefab = buildingPrefabs[randInt];
+
+        addButton( prefab );
+    }
+
+    public bool addBuildingSet( List<GameObject> prefabs )
+    {
+        bool allAdded = false;
+
+        if ( buttons.Count + prefabs.Count < MAX_INVENTORY_SIZE )
+        {
+            foreach ( GameObject prefab in prefabs )
+            {
+                addButton( prefab );
+            }
+
+            allAdded = true;
+        }
+
+        return ( allAdded );
+    }
+
+    public bool insertFromSet( List<GameObject> prefabs )
+    {
+        bool hasAdded = false;
+
+        while ( numInInventory() < MAX_INVENTORY_SIZE && prefabs.Count > 0 )
+        {
+            addButton( prefabs[0] );
+            prefabs.RemoveAt( 0 );
+
+            hasAdded = true;
+        }
+
+        return ( hasAdded );
+    }
+
+    public int numInInventory()
+    {
+        return ( buttons.Count );
     }
 }
