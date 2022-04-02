@@ -73,7 +73,8 @@ public class PlacementController : MonoBehaviour
 
     public void SetActiveBuildingType( GameObject placeableObjectPrefab, Transform transform )
     {
-        if ( currentPlaceableObject == null )
+        if ( currentPlaceableObject == null 
+            && gameManager.GetComponent<GameManager>().canPlaceObject( placeableObjectPrefab ) )
         {
             currentPlaceableObject = Instantiate( placeableObjectPrefab );
             buttonTransform = transform;

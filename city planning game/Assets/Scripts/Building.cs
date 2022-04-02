@@ -17,6 +17,9 @@ public class Building : MonoBehaviour
     [SerializeField]
     public List<BuildingAffinity> affinities = new List<BuildingAffinity>();
 
+    [SerializeField]
+    public int cost = 2;
+
     // Building object data
     public Rigidbody rigidbody;
     public GameObject radius;
@@ -127,7 +130,7 @@ public class Building : MonoBehaviour
         points.enabled = false;
         currState = PlacementState.Placed;
 
-        currPoints = ComputeScore();
+        currPoints = ComputeScore() - cost;
         return ( currPoints );
     }
 
