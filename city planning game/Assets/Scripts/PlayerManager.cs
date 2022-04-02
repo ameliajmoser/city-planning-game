@@ -6,7 +6,7 @@ using UnityEngine;
 // TODO: We will need to signal the UI controller that the points have been updated to rerender
 public class PlayerManager : MonoBehaviour
 {
-    private int inventorySize = 8;
+    // private int inventorySize = 8;
 
     [SerializeField]
     private int currScore = 0;
