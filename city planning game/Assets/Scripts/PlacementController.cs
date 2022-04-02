@@ -68,8 +68,9 @@ public class PlacementController : MonoBehaviour
     }
 
     public void SetActiveBuildingType( GameObject placeableObjectPrefab )
-    {
-        if ( currentPlaceableObject == null )
+    { 
+        if ( currentPlaceableObject == null 
+            && gameManager.GetComponent<GameManager>().canPlaceObject( placeableObjectPrefab ) )
         {
             currentPlaceableObject = Instantiate( placeableObjectPrefab );
         }

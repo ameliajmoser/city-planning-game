@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         mouseInput.OnMouseDown += HandleMouseClick;
+        scoreUIManager.GetComponent<UI_ProgressBar>().SetUIScore( playerManager.GetComponent<PlayerManager>().GetScore() );
     }
 
     private void HandleMouseClick(Vector3 pos)
@@ -39,6 +40,15 @@ public class GameManager : MonoBehaviour
     {
         playerManager.GetComponent<PlayerManager>().UpdateScore( amt );
         scoreUIManager.GetComponent<UI_ProgressBar>().SetUIScore( playerManager.GetComponent<PlayerManager>().GetScore() );
+    }
+
+    public bool canPlaceObject( GameObject buildingPrefab )
+    {
+        Building building = buildingPrefab.GetComponent<Building>();
+        int cost = building.cost;
+        int playerScore = playerManager.GetComponent<PlayerManager>().GetScore();
+
+        return ( cost < playerScore );
     }
 
     // private void PlaceGameObject(GameObject obj, Vector3 pos){
