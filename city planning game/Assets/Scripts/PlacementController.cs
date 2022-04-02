@@ -15,6 +15,8 @@ public class PlacementController : MonoBehaviour
     [SerializeField]
     private GameObject gameManager;
 
+    private Transform buttonTransform;
+
     void Update()
     {
         if ( Input.GetKeyDown( KeyCode.Escape )  || Input.GetKeyDown(KeyCode.Mouse1))
@@ -61,18 +63,21 @@ public class PlacementController : MonoBehaviour
                 gameManager.GetComponent<GameManager>().updatePlayerScore( points );
 
                 currentPlaceableObject = null;
-            }
-            
 
+                // Remove button from inventory
+                gameManager.GetComponent<GameManager>().removeButton( buttonTransform );
+                buttonTransform = null;
+            }
         }
     }
 
-    public void SetActiveBuildingType( GameObject placeableObjectPrefab )
-    { 
+    public void SetActiveBuildingType( GameObject placeableObjectPrefab, Transform transform )
+    {
         if ( currentPlaceableObject == null 
             && gameManager.GetComponent<GameManager>().canPlaceObject( placeableObjectPrefab ) )
         {
             currentPlaceableObject = Instantiate( placeableObjectPrefab );
+            buttonTransform = transform;
         }
     }
 }
