@@ -24,6 +24,7 @@ public class Building : MonoBehaviour
     public Rigidbody rigidbody;
     public GameObject radius;
     public TMP_Text points;
+    public GameObject indicator;
 
     private int currPoints;
     private int numCollisions;
@@ -51,12 +52,17 @@ public class Building : MonoBehaviour
 
     private PlacementState currState;
 
+    private List<GameObject> activeBuildings;
+
     void Awake()
     {
         buildingID = System.Guid.NewGuid().ToString();
         currState = PlacementState.Hover;
         currPoints = 0;
         numCollisions = 0;
+        
+        indicator.SetActive( false );
+        activeBuildings = new List<GameObject>();
 
         // Set radius of sensing radius
         radius.transform.localScale = new Vector3( affinityRadius * 2, affinityRadius * 2, 0 );
@@ -79,6 +85,9 @@ public class Building : MonoBehaviour
     {
         int score = 0;
         int layerMask = LayerMask.GetMask("Buildings");
+
+        // New buildings list
+        List<GameObject> newActiveBuildings = new List<GameObject>();
         
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, affinityRadius, layerMask);
         
@@ -87,11 +96,25 @@ public class Building : MonoBehaviour
             if ( hitCollider.gameObject != transform.gameObject )
             {
                 GameObject hitBuilding = hitCollider.gameObject;
+                newActiveBuildings.Add( hitBuilding );
                 
                 BuildingType type = hitBuilding.GetComponent<Building>().buildingType;
                 score += GetBuildingAffinity( type );
             }
         }
+
+        // We can probably do this real inefficiently cuz the number of buildings is so small I hope
+        foreach (var hitBuilding in activeBuildings)
+        {
+            hitBuilding.GetComponent<Building>().indicator.SetActive( false );
+        }
+
+        foreach (var hitBuilding in newActiveBuildings)
+        {
+            hitBuilding.GetComponent<Building>().indicator.SetActive( true );
+        }
+
+        activeBuildings = newActiveBuildings;
 
         return ( score );
     }
@@ -111,6 +134,7 @@ public class Building : MonoBehaviour
 
     void OnGUI() {
         points.transform.LookAt(Camera.main.transform);
+        indicator.transform.LookAt(Camera.main.transform);
     }
     void OnCollisionEnter()
     {
@@ -129,8 +153,13 @@ public class Building : MonoBehaviour
         radius.SetActive( false );
         points.enabled = false;
         currState = PlacementState.Placed;
-
         currPoints = ComputeScore() - cost;
+
+        foreach (var hitBuilding in activeBuildings)
+        {
+            hitBuilding.GetComponent<Building>().indicator.SetActive( false );
+        }
+
         return ( currPoints );
     }
 
@@ -146,7 +175,7 @@ public class Building : MonoBehaviour
         return false;
     }
 
-    public String ToString() {
+    public override String ToString() {
         String enumString = buildingType.ToString();
         List<int> spaceIndeces = new List<int>();
         for (int i = 1; i < enumString.Length; i++) {
