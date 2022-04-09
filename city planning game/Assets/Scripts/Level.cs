@@ -14,7 +14,7 @@ public class Level : MonoBehaviour
     private List<GameObject> inventory;
 
     [SerializeField]
-    private List<Quest> quests;
+    private List<GameObject> quests;
 
     // Get point total
     public int GetPointGoal()
@@ -27,7 +27,7 @@ public class Level : MonoBehaviour
         return ( inventory );
     }
 
-    public List<Quest> GetQuests()
+    public List<GameObject> GetQuests()
     {
         return ( quests );
     }

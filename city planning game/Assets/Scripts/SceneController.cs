@@ -29,13 +29,13 @@ public class SceneController : MonoBehaviour
     }
 
     // Get current level
-    public static String GetCurrentLevel()
+    public static string GetCurrentLevel()
     {
         return ( currScene );
     }
 
     // Load new level/scene
-    public static void LoadScene( String scene )
+    public static void LoadScene( string scene )
     {
         currScene = scene;
         SceneManager.LoadScene( currScene );

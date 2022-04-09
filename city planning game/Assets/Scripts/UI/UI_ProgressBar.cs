@@ -19,7 +19,7 @@ public class UI_ProgressBar : MonoBehaviour
     [SerializeField]
     private GameObject pointsText;
 
-    private float pointGoal = 100.0f;
+    private int pointGoal = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -30,20 +30,20 @@ public class UI_ProgressBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        LeftBar.sizeDelta = new Vector2((pointGoal * percentage), 100);
-        RightBar.sizeDelta = new Vector2((pointGoal - LeftBar.rect.width), 100);
+        LeftBar.sizeDelta = new Vector2((100.0f * percentage), 100);
+        RightBar.sizeDelta = new Vector2((100.0f - LeftBar.rect.width), 100);
     }
 
     public void SetUIScore( int score )
     {
-        percentage = score / pointGoal;
+        percentage = ( float ) score / ( float ) pointGoal;
 
         // Transform pointsText = transform.Find( "Points Text" );
         // pointsText.gameObject.GetComponent<Text>().text = score + "/100";
         pointsText.GetComponent<TMP_Text>().text = score + "/" + pointGoal;
     }
 
-    public void SetPointGoal( float goal )
+    public void SetPointGoal( int goal )
     {
         pointGoal = goal;
     }

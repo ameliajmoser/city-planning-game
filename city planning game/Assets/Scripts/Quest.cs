@@ -7,9 +7,13 @@ using UnityEngine;
  */
 public class Quest : MonoBehaviour
 {
+    [System.Serializable]
     public struct Message
     {
+        [SerializeField]
         public string character;
+
+        [SerializeField]
         public Character.Tweet tweet;
     }
 
@@ -26,7 +30,7 @@ public class Quest : MonoBehaviour
 
     // What character gets updated?
     [SerializeField]
-    private List<String> characters;
+    private List<string> characters;
 
     // What messages do we immediately send out?
     [SerializeField]
@@ -44,7 +48,7 @@ public class Quest : MonoBehaviour
 
     public bool passedQuest( List<GameObject> nearBuildings )
     {
-        // TODO: check if passed by near buildings
+        // TODO: check if placed by near buildings (HOW ARE WE HANDLING THIS?)
         return ( false );
     }
 
@@ -78,7 +82,7 @@ public class Quest : MonoBehaviour
         buildingsPlaced += 1;
     }
 
-    public List<String> getCharacters()
+    public List<string> getCharacters()
     {
         return ( characters );
     }

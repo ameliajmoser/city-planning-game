@@ -100,4 +100,14 @@ public class BuildingPanelUI : MonoBehaviour
     {
         return ( buttons.Count );
     }
+
+    public void clearInventory()
+    {
+        foreach( Transform transform in buttons )
+        {
+            Destroy( transform.gameObject );
+        }
+
+        buttons = new List<Transform>();
+    }
 }

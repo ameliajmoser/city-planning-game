@@ -49,6 +49,9 @@ public class DialogueManager : MonoBehaviour {
 		characters.Add( new Character( "Sports-Channel" ) ); // city sports channel
 		characters.Add( new Character( "Blank" ) );
 
+		// Messages
+		messages = new List<Quest.Message>();
+
 		// Dialogue container
 		containerRectTrans = dialogueContainer.GetComponent<RectTransform>();
 
@@ -150,7 +153,7 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 	public void pushMessage( Quest.Message message )
-	{
+	{	
 		Character character = getCharacter( message.character );
 
 		if ( character != null )
@@ -160,16 +163,16 @@ public class DialogueManager : MonoBehaviour {
 		}
 	}
 
-	public void AddMessages( Quest.Message message )
+	public void AddMessage( Quest.Message message )
 	{
 		messages.Add( message );
 	}
 
-	public Character getCharacter( String name )
+	public Character getCharacter( string name )
 	{
 		foreach( Character character in characters )
-		{
-			if ( character.getCharacterName() == name )
+		{	
+			if ( character.getCharacterName().Equals( name ) )
 			{
 				return character;
 			}

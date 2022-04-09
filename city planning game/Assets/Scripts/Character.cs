@@ -6,6 +6,7 @@ using System.Xml.Serialization;
 
 public class Character
 {
+    [System.Serializable]
     public struct Tweet
     {
         public string header;
@@ -87,7 +88,7 @@ public class Character
         return ( questsFailed );
     }
 
-    public String getCharacterName()
+    public string getCharacterName()
     {
         return ( characterName );
     }
