@@ -66,4 +66,24 @@ public class Character
         int randInt = Random.Range( 0, randomTweets.Count - 1 );
 		return randomTweets[randInt];
     }
+
+    public void passQuest()
+    {
+        questsPassed += 1;
+    }
+
+    public void failQuest()
+    {
+        questsFailed += 1;
+    }
+
+    public int getPassedQuests()
+    {
+        return ( questsPassed );
+    }
+
+    public int getFailedQuests()
+    {
+        return ( questsFailed );
+    }
 }

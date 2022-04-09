@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         scoreUIManager.GetComponent<UI_ProgressBar>().SetUIScore( playerManager.GetComponent<PlayerManager>().GetScore() );
 
         // Inventory
-        buildingPannelUI.GetComponent<BuildingPanelUI>().addBuildingSet( levels[currLevel] );
+        buildingPannelUI.GetComponent<BuildingPanelUI>().addBuildingSet( levels[currLevel].GetLevelInventory() );
     }
 
     private void HandleMouseClick(Vector3 pos)
@@ -50,9 +50,25 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // TODO: check curr level stuff
-        // TODO: did we reach point goal?
+        // check curr level stuff
+        int currScore = playerManager.GetComponent<PlayerManager>().GetScore();
+        int pointGoal = levels[currLevel].GetPointGoal();
+
+        if ( currScore >= pointGoal )
+        {
+            // We have passed the level
+            if ( currScore + 1 < levels.Count )
+            {
+                currScore += 1;
+            }
+        }
+
         // TODO: did we pass any quests? (fail any?) -> update relations
+        List<Quest> quests = levels[currLevel].GetQuests();
+        foreach( Quest quest in quests )
+        {
+
+        }
     }
 
     public void updatePlayerScore( int amt )

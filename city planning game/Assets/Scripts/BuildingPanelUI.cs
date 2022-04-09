@@ -54,9 +54,6 @@ public class BuildingPanelUI : MonoBehaviour
     public void removeButton( Transform transform )
     {
         Destroy( transform.gameObject );
-
-        // TODO: this is just temporary unitl we have levels
-        addRandomBuilding();
     }
 
     public void addRandomBuilding()

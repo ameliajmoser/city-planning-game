@@ -13,6 +13,9 @@ public class Level : MonoBehaviour
     [SerializeField]
     private List<GameObject> inventory;
 
+    [SerializeField]
+    private List<Quest> quests;
+
     // Get point total
     public int GetPointGoal()
     {
@@ -24,5 +27,8 @@ public class Level : MonoBehaviour
         return ( inventory );
     }
 
-    // TODO: contain quests -> contain failure and pass conditions with builiding placement limit count character relation etc.
+    public List<Quest> GetQuests()
+    {
+        return ( quests );
+    }
 }
