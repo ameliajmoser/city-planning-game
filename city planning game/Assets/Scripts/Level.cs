@@ -7,13 +7,11 @@ using UnityEngine;
  */
 public class Level : MonoBehaviour
 {
-    // Defines scene name and point goal
-    // TODO: ideally point goal would only be defined for a subclass of level that is for game levels only (not menus)
     [SerializeField]
     private int mPointGoal;
 
     [SerializeField]
-    private string mScene;
+    private List<GameObject> inventory;
 
     // Get point total
     public int GetPointGoal()
@@ -21,9 +19,10 @@ public class Level : MonoBehaviour
         return ( mPointGoal );
     }
 
-    // Get scene name
-    public string GetScene()
+    public List<GameObject> GetLevelInventory()
     {
-        return ( mScene );
+        return ( inventory );
     }
+
+    // TODO: contain quests -> contain failure and pass conditions with builiding placement limit count character relation etc.
 }

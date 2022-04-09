@@ -12,7 +12,7 @@ public class SceneController : MonoBehaviour
     public static SceneController scInstance = null;
 
     // Current level object
-    private static Level currLevel;
+    private static string currScene;
 
     // Create only one instance
     public void Awake()
@@ -29,15 +29,15 @@ public class SceneController : MonoBehaviour
     }
 
     // Get current level
-    public static Level GetCurrentLevel()
+    public static String GetCurrentLevel()
     {
-        return ( currLevel );
+        return ( currScene );
     }
 
     // Load new level/scene
-    public static void LoadLevel( Level level )
+    public static void LoadScene( String scene )
     {
-        currLevel = level;
-        SceneManager.LoadScene( currLevel.GetScene() );
+        currScene = scene;
+        SceneManager.LoadScene( currScene );
     }
 }

@@ -21,6 +21,9 @@ public class Character
     private string profilePath;
     private string characterName;
 
+    private int questsPassed = 0;
+    private int questsFailed = 0;
+
     public Character( string fileName )
     {
         mFileName = fileName;

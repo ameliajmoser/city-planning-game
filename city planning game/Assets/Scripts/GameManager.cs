@@ -18,11 +18,25 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject buildingPannelUI;
 
+    [SerializeField]
+    private GameObject dialogueManager;
+
+    [SerializeField]
+	private List<Level> levels;
+
+    private int currLevel = 0;
+
     // Start is called before the first frame update
     private void Start()
     {
         mouseInput.OnMouseDown += HandleMouseClick;
+
+        // UI Set up
+        scoreUIManager.GetComponent<UI_ProgressBar>().SetPointGoal( levels[currLevel].GetPointGoal() );
         scoreUIManager.GetComponent<UI_ProgressBar>().SetUIScore( playerManager.GetComponent<PlayerManager>().GetScore() );
+
+        // Inventory
+        buildingPannelUI.GetComponent<BuildingPanelUI>().addBuildingSet( levels[currLevel] );
     }
 
     private void HandleMouseClick(Vector3 pos)
@@ -36,7 +50,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // TODO: check curr level stuff
+        // TODO: did we reach point goal?
+        // TODO: did we pass any quests? (fail any?) -> update relations
     }
 
     public void updatePlayerScore( int amt )

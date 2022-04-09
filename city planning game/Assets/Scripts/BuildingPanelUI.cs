@@ -25,17 +25,17 @@ public class BuildingPanelUI : MonoBehaviour
         buildingButtonTemplate = transform.Find( "BuildingButtonTemplate" );
         buildingButtonTemplate.gameObject.SetActive( false );
 
-        int index = 0;
-        foreach ( GameObject buildingPrefab in buildingPrefabs )
-        {
-            if ( index > MAX_INVENTORY_SIZE - 1 )
-            {
-                break;
-            }
+        // int index = 0;
+        // foreach ( GameObject buildingPrefab in buildingPrefabs )
+        // {
+        //     if ( index > MAX_INVENTORY_SIZE - 1 )
+        //     {
+        //         break;
+        //     }
 
-            addButton( buildingPrefab ); 
-            index++;
-        }
+        //     addButton( buildingPrefab ); 
+        //     index++;
+        // }
     }
 
     private void addButton( GameObject buildingPrefab )
