@@ -163,6 +163,11 @@ public class Building : MonoBehaviour
         return ( currPoints );
     }
 
+    public List<GameObject> getActiveBuildings()
+    {
+        return ( activeBuildings );
+    }
+
     public int getPoints()
     {
         return ( currPoints );

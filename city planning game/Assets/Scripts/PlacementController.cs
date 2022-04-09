@@ -71,6 +71,9 @@ public class PlacementController : MonoBehaviour
                 buttonTransform = null;
 
                 buildingsPlaced += 1;
+
+                gameManager.GetComponent<GameManager>().updateQuests();
+                gameManager.GetComponent<GameManager>().checkQuests( building.buildingType, building.getActiveBuildings() );
             }
         }
     }

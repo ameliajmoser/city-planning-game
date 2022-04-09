@@ -29,6 +29,8 @@ public class DialogueManager : MonoBehaviour {
 	// List of characters to select tweet from
 	private List<Character> characters;
 
+	private List<Quest.Message> messages;
+
 	void Awake ()
 	{
 		// Init characters
@@ -63,10 +65,18 @@ public class DialogueManager : MonoBehaviour {
 			// Check if not null
 			if ( textBoxPrefab )
 			{
-				Character character = GetRandomCharacter();
-				Character.Tweet tweet = character.GetRandomTweet();
+				if ( messages.Count > 0 )
+				{
+					pushMessage( messages[0] );
+					messages.RemoveAt( 0 );
+				}
+				else
+				{
+					Character character = GetRandomCharacter();
+					Character.Tweet tweet = character.GetRandomTweet();
 
-				AddDialogueBox( character, tweet );
+					AddDialogueBox( character, tweet );
+				}
 			}
 
 			yield return new WaitForSeconds( interval );
@@ -139,8 +149,32 @@ public class DialogueManager : MonoBehaviour {
 		return ( characters );
 	}
 
-	public void pushMessage( Character character, Character.Tweet tweet )
+	public void pushMessage( Quest.Message message )
 	{
-		AddDialogueBox( character, tweet );
+		Character character = getCharacter( message.character );
+
+		if ( character != null )
+		{
+			Character.Tweet tweet = message.tweet;
+			AddDialogueBox( character, tweet );
+		}
+	}
+
+	public void AddMessages( Quest.Message message )
+	{
+		messages.Add( message );
+	}
+
+	public Character getCharacter( String name )
+	{
+		foreach( Character character in characters )
+		{
+			if ( character.getCharacterName() == name )
+			{
+				return character;
+			}
+		}
+
+		return null;
 	}
 }

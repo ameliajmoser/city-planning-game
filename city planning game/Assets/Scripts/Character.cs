@@ -86,4 +86,9 @@ public class Character
     {
         return ( questsFailed );
     }
+
+    public String getCharacterName()
+    {
+        return ( characterName );
+    }
 }
