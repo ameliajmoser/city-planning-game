@@ -63,7 +63,10 @@ public class DialogueManager : MonoBehaviour {
 			// Check if not null
 			if ( textBoxPrefab )
 			{
-				AddDialogueBox();
+				Character character = GetRandomCharacter();
+				Character.Tweet tweet = character.GetRandomTweet();
+
+				AddDialogueBox( character, tweet );
 			}
 
 			yield return new WaitForSeconds( interval );
@@ -71,7 +74,7 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 	// Add box
-	void AddDialogueBox()
+	void AddDialogueBox( Character character, Character.Tweet tweet )
 	{
 		RectTransform containerRectTrans = dialogueContainer.GetComponent<RectTransform>();
 
@@ -94,11 +97,6 @@ public class DialogueManager : MonoBehaviour {
 
 		// Update text
 		// TODO: update dialogue box profile picture
-
-		// For now grab random character
-		Character character = GetRandomCharacter();
-		Character.Tweet tweet = character.GetRandomTweet();
-
 		var dialogue = newBox.GetComponent<Dialogue>();
 		dialogue.messageHeader.text = tweet.header;
 		dialogue.messageBody.text = tweet.body;
@@ -134,5 +132,15 @@ public class DialogueManager : MonoBehaviour {
 	{
 		int randInt = Random.Range( 0, characters.Count - 1 );
 		return characters[randInt];
+	}
+
+	public List<Character> getCharacters()
+	{
+		return ( characters );
+	}
+
+	public void pushMessage( Character character, Character.Tweet tweet )
+	{
+		AddDialogueBox( character, tweet );
 	}
 }
