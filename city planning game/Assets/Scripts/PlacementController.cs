@@ -17,6 +17,8 @@ public class PlacementController : MonoBehaviour
 
     private Transform buttonTransform;
 
+    private int buildingsPlaced = 0;
+
     void Update()
     {
         if ( Input.GetKeyDown( KeyCode.Escape )  || Input.GetKeyDown(KeyCode.Mouse1))
@@ -67,6 +69,11 @@ public class PlacementController : MonoBehaviour
                 // Remove button from inventory
                 gameManager.GetComponent<GameManager>().removeButton( buttonTransform );
                 buttonTransform = null;
+
+                buildingsPlaced += 1;
+
+                gameManager.GetComponent<GameManager>().updateQuests();
+                gameManager.GetComponent<GameManager>().checkQuests( building.buildingType, building.getActiveBuildings() );
             }
         }
     }
@@ -79,5 +86,15 @@ public class PlacementController : MonoBehaviour
             currentPlaceableObject = Instantiate( placeableObjectPrefab );
             buttonTransform = transform;
         }
+    }
+
+    public void ResetBuildingCount()
+    {
+        buildingsPlaced = 0;
+    }
+
+    public int GetBuildingsPlacedCount()
+    {
+        return ( buildingsPlaced );
     }
 }

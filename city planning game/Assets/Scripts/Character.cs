@@ -6,6 +6,7 @@ using System.Xml.Serialization;
 
 public class Character
 {
+    [System.Serializable]
     public struct Tweet
     {
         public string header;
@@ -20,6 +21,9 @@ public class Character
     private List<Tweet> badTweets;
     private string profilePath;
     private string characterName;
+
+    private int questsPassed = 0;
+    private int questsFailed = 0;
 
     public Character( string fileName )
     {
@@ -62,5 +66,30 @@ public class Character
     {
         int randInt = Random.Range( 0, randomTweets.Count - 1 );
 		return randomTweets[randInt];
+    }
+
+    public void passQuest()
+    {
+        questsPassed += 1;
+    }
+
+    public void failQuest()
+    {
+        questsFailed += 1;
+    }
+
+    public int getPassedQuests()
+    {
+        return ( questsPassed );
+    }
+
+    public int getFailedQuests()
+    {
+        return ( questsFailed );
+    }
+
+    public string getCharacterName()
+    {
+        return ( characterName );
     }
 }

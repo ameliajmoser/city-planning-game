@@ -116,6 +116,8 @@ public class Building : MonoBehaviour
 
         activeBuildings = newActiveBuildings;
 
+        score -= cost;
+
         return ( score );
     }
 
@@ -153,7 +155,7 @@ public class Building : MonoBehaviour
         radius.SetActive( false );
         points.enabled = false;
         currState = PlacementState.Placed;
-        currPoints = ComputeScore() - cost;
+        currPoints = ComputeScore();
 
         foreach (var hitBuilding in activeBuildings)
         {
@@ -161,6 +163,11 @@ public class Building : MonoBehaviour
         }
 
         return ( currPoints );
+    }
+
+    public List<GameObject> getActiveBuildings()
+    {
+        return ( activeBuildings );
     }
 
     public int getPoints()
@@ -175,15 +182,15 @@ public class Building : MonoBehaviour
         return false;
     }
 
-    public override String ToString() {
-        String enumString = buildingType.ToString();
+    public override string ToString() {
+        string enumString = buildingType.ToString();
         List<int> spaceIndeces = new List<int>();
         for (int i = 1; i < enumString.Length; i++) {
             if(enumString[i] >= 'A' && enumString[i] <= 'Z')
             spaceIndeces.Add(i);
         }
         spaceIndeces.Add(enumString.Length);
-        String resultString = enumString;
+        string resultString = enumString;
         if(spaceIndeces.Count > 0) {
             resultString = enumString.Substring(0, spaceIndeces[0]);
             for (int i = 1; i < spaceIndeces.Count; i++) {
