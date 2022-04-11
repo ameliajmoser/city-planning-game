@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44707966, g: 0.49698246, b: 0.57510084, a: 1}
+  m_IndirectSpecularColor: {r: 0.44708014, g: 0.4969833, b: 0.575102, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -770,11 +770,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6262953333801497772, guid: 530a48ff36318d846a61a341fd303313, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6262953333801497772, guid: 530a48ff36318d846a61a341fd303313, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6262953333801497772, guid: 530a48ff36318d846a61a341fd303313, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1164,13 +1164,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.08519574, z: -0, w: 0.99636424}
   m_LocalPosition: {x: -17, y: 29, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -9.775, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1185,10 +1185,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 869510806}
   cameraPos: {fileID: 963194228}
-  X: 0
-  Y: 0
-  Z: 0
+  placementController: {fileID: 549133905}
   angularSpeed: 100
+  panSpeedNormal: 30
+  panSpeedFast: 60
+  outOfBoundsDistance: 62
 --- !u!1 &1023918831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,26 +1846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af2f663ef97e649f9c8abce08395aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetBuilding: 7
-  proximityBuildings: 05000000
-  expireLimit: 10
-  characters:
-  - Betsy
-  triggerMessages:
-  - character: Betsy
-    tweet:
-      header: Trigger
-      body: Test
-  successMessages:
-  - character: Betsy
-    tweet:
-      header: Success
-      body: Test
-  failureMessages:
-  - character: Betsy
-    tweet:
-      header: Failure
-      body: Test
 --- !u!1 &2005372177
 GameObject:
   m_ObjectHideFlags: 0

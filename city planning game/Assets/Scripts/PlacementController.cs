@@ -97,4 +97,8 @@ public class PlacementController : MonoBehaviour
     {
         return ( buildingsPlaced );
     }
+
+    public bool IsHoldingBuilding(){
+        return currentPlaceableObject != null;
+    }
 }
