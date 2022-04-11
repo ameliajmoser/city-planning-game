@@ -48,8 +48,33 @@ public class Quest : MonoBehaviour
 
     public bool passedQuest( List<GameObject> nearBuildings )
     {
-        // TODO: check if placed by near buildings (HOW ARE WE HANDLING THIS?)
-        return ( false );
+        // check if placed near all target buildings
+        bool passed = true;
+
+        foreach ( Building.BuildingType targetType in proximityBuildings )
+        {
+            bool typeNear = false;
+
+            foreach ( GameObject building in nearBuildings )
+            {
+                Building.BuildingType type = building.GetComponent<Building>().buildingType;
+
+                if ( type == targetType )
+                {
+                    typeNear = true;
+                    break;
+                }
+            }
+
+            passed = passed && typeNear;
+
+            if ( !passed )
+            {
+                break;
+            }
+        }
+
+        return ( passed );
     }
 
     public bool failedQuest()

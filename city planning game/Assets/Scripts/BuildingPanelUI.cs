@@ -105,7 +105,10 @@ public class BuildingPanelUI : MonoBehaviour
     {
         foreach( Transform transform in buttons )
         {
-            Destroy( transform.gameObject );
+            if ( transform )
+            {
+                Destroy( transform.gameObject );
+            }
         }
 
         buttons = new List<Transform>();

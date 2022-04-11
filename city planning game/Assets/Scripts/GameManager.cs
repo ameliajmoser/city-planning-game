@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,10 +30,13 @@ public class GameManager : MonoBehaviour
 
     private int currLevel = 0;
 
+    private List<GameObject> quests;
+
     // Start is called before the first frame update
     private void Start()
     {
         mouseInput.OnMouseDown += HandleMouseClick;
+        quests = new List<GameObject>();
 
         setUp();
     }
@@ -50,8 +54,8 @@ public class GameManager : MonoBehaviour
 
 
         // Set up any quests for this level
-        List<GameObject> quests = levels[currLevel].GetComponent<Level>().GetQuests();
-        foreach( GameObject q in quests )
+        List<GameObject> tempQuests = levels[currLevel].GetComponent<Level>().GetQuests();
+        foreach( GameObject q in tempQuests )
         {
             Quest quest = q.GetComponent<Quest>();
             List<Quest.Message> messages = quest.getTriggerMessages();
@@ -62,6 +66,9 @@ public class GameManager : MonoBehaviour
                 dialogueManager.GetComponent<DialogueManager>().AddMessage( message );
             }
         }
+
+        quests = quests.Concat( levels[currLevel].GetComponent<Level>().GetQuests() ).ToList();
+
 
         // TODO: HOW DO WE HANDLE PLAYER POINTS WHEN MOVING FROM ONE LEVEL TO NEXT?
     }
@@ -102,7 +109,6 @@ public class GameManager : MonoBehaviour
     public void checkQuests( Building.BuildingType type, List<GameObject> nearBuildings )
     {
         // Did we pass any quests? (fail any?) -> update relations
-        List<GameObject> quests = levels[currLevel].GetComponent<Level>().GetQuests();
         foreach( GameObject q in quests )
         {
             Quest quest = q.GetComponent<Quest>();
@@ -161,7 +167,6 @@ public class GameManager : MonoBehaviour
     // Call when placing bulding
     public void updateQuests()
     {
-        List<GameObject> quests = levels[currLevel].GetComponent<Level>().GetQuests();
         foreach( GameObject quest in quests )
         {
             quest.GetComponent<Quest>().increaseBuildingsPlaced();
