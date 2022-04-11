@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44708014, g: 0.4969833, b: 0.575102, a: 1}
+  m_IndirectSpecularColor: {r: 0.44707966, g: 0.49698246, b: 0.57510084, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1405,8 +1405,7 @@ MonoBehaviour:
   - {fileID: 2008035343353864571, guid: f317f1e6cbb7a46daac90949f9aa6f34, type: 3}
   - {fileID: 2008035343353864571, guid: fe5b737f1cc309d49ad8aa58bb4f56ba, type: 3}
   - {fileID: 2008035343353864571, guid: b6ae8d325d38f224eb3be3d663c33b0b, type: 3}
-  quests:
-  - {fileID: 1989598148}
+  quests: []
 --- !u!1 &1318652730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,6 +1845,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af2f663ef97e649f9c8abce08395aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetBuilding: 7
+  proximityBuildings: 05000000
+  expireLimit: 3
+  characters:
+  - Betsy
+  triggerMessages:
+  - character: Betsy
+    tweet:
+      header: Betsy
+      body: I wish we had a school near our aparment...
+  successMessages:
+  - character: Betsy
+    tweet:
+      header: Betsy
+      body: We have the best city planner ever! Thank you for valuing education.
+  failureMessages:
+  - character: Betsy
+    tweet:
+      header: Betsy
+      body: I can't believe we don't have access to good education near our appartment.
 --- !u!1 &2005372177
 GameObject:
   m_ObjectHideFlags: 0
