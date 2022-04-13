@@ -23,6 +23,9 @@ public class PlacementController : MonoBehaviour
     {
         if ( Input.GetKeyDown( KeyCode.Escape )  || Input.GetKeyDown(KeyCode.Mouse1))
         {
+            var building = currentPlaceableObject.GetComponent<Building>();
+            building.ClearIndicators();
+
             Destroy( currentPlaceableObject );
         }
 
