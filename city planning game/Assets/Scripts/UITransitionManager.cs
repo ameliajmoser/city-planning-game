@@ -40,7 +40,7 @@ public class UITransitionManager : MonoBehaviour
     [SerializeField] private TransitionInstance[] _transitionList;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         cGroup = GetComponent<CanvasGroup>();
     }

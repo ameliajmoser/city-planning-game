@@ -9,6 +9,9 @@ using TMPro;
 public class DialogueManager : MonoBehaviour {
 
 	[SerializeField]
+	private DialoguePopup dialoguePopup;
+
+	[SerializeField]
 	private GameObject dialogueContainer;
 
 	[SerializeField]
@@ -99,7 +102,7 @@ public class DialogueManager : MonoBehaviour {
 		Character character = GetRandomCharacter();
 		Character.Tweet tweet = character.GetRandomTweet();
 
-		var dialogue = newBox.GetComponent<Dialogue>();
+		var dialogue = newBox.GetComponent<TweetDialogue>();
 		dialogue.messageHeader.text = tweet.header;
 		dialogue.messageBody.text = tweet.body;
 

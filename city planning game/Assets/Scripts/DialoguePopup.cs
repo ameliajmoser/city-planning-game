@@ -11,36 +11,47 @@ public class DialoguePopup : MonoBehaviour
     [SerializeField]
     private TMP_Text bodyText;
 
-    private UITransitionManager firstTransition;
-
     [SerializeField]
-    private UITransitionManager secondTransition;
+    private UITransitionManager[] transitionList;
 
-    private bool dialogueOpen = false;
+    private List<string> slides;
+    private bool dialogueOpen;
+    private int currentSlide;
 
     // Start is called before the first frame update
     void Start()
     {
-        firstTransition = GetComponent<UITransitionManager>();
-        QueueDialoguePopup();
+        dialogueOpen = false;
+        currentSlide = 0;
     }
 
-    public void QueueDialoguePopup( /*Character character*/ ) {
-        // nameText.text = character.characterName;
-        // bodyText.text = dialogueString;
-        firstTransition.TriggerTransition("StartDialogue");
-        dialogueOpen = true;
+    public void QueueDialoguePopup( Character character, string key ) {
+        Character.Dialogue dialogue = character.GetDialogue(key);
+        nameText.text = dialogue.name;
+        slides = new List<string>(dialogue.slides);
+        bodyText.text = slides[0];
+        currentSlide = 0;
+        foreach(UITransitionManager transition in transitionList) {
+            transition.TriggerTransition("StartDialogue");
+        }
+    }
 
+    public void DialogueOpened() {
+        dialogueOpen = true;
     }
 
     void Update() { // I'd like to move this out of update into like a coroutine or something but it's fine for now
         if (dialogueOpen) {
-            if(Input.anyKey) {
-                // if more dialogue
-                    // change text
-                // else
-                secondTransition.TriggerTransition("EndDialogue");
-                dialogueOpen = false;
+            if(Input.anyKeyDown) {
+                if (currentSlide < slides.Count - 1) {
+                    currentSlide++;
+                    bodyText.text = slides[currentSlide];
+                } else {
+                    foreach(UITransitionManager transition in transitionList) {
+                        transition.TriggerTransition("EndDialogue");
+                        dialogueOpen = false;
+                    }
+                }
             }
         }
     }

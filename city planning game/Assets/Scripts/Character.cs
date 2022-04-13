@@ -12,12 +12,19 @@ public class Character
         public string body;
     }
 
+    public struct Dialogue
+    {
+        public string name;
+        public List<string> slides;
+    }
+
     private string mFileName;
     private XmlDocument xmlDoc;
 
     private List<Tweet> randomTweets;
     private List<Tweet> goodTweets;
     private List<Tweet> badTweets;
+    private Dictionary<string, Dialogue> dialogueDict;
     private string profilePath;
     private string characterName;
 
@@ -28,6 +35,9 @@ public class Character
         randomTweets = new List<Tweet>();
         goodTweets = new List<Tweet>();
         badTweets = new List<Tweet>();
+
+        dialogueDict = new Dictionary<string, Dialogue>();
+
     
         loadXML();
         parseXML();
@@ -54,7 +64,20 @@ public class Character
             tempTweet.header = characterName;
             tempTweet.body = node.InnerText.Trim();
 
-            randomTweets.Add( tempTweet );    
+            randomTweets.Add( tempTweet );
+        }
+
+        foreach( XmlElement node in xmlDoc.SelectNodes( "character/dialogue/entry" ) )
+        {
+            Dialogue dialogue = new Dialogue();
+            dialogue.name = characterName;
+            dialogue.slides = new List<string>();
+            foreach (XmlElement slide in node.SelectNodes( "dialogue/slide" ) )
+            {
+                dialogue.slides.Add(slide.InnerText.Trim());
+            }
+            
+            dialogueDict.Add(node.SelectSingleNode( "key" ).InnerText, dialogue);
         }
     }
 
@@ -62,5 +85,10 @@ public class Character
     {
         int randInt = Random.Range( 0, randomTweets.Count - 1 );
 		return randomTweets[randInt];
+    }
+
+    public Dialogue GetDialogue(string key)
+    {
+        return dialogueDict[key];
     }
 }
