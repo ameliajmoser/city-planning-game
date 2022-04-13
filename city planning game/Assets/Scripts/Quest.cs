@@ -21,6 +21,9 @@ public class Quest : MonoBehaviour
     [SerializeField]
     private Building.BuildingType targetBuilding;
 
+    [SerializeField]
+    private Building.BuildingType triggerBuilding = Building.BuildingType.Default;
+
     // How do I pass this quest? (what other buildings do I need to be near, building placement limit)
     [SerializeField]
     private List<Building.BuildingType> proximityBuildings;
@@ -45,6 +48,8 @@ public class Quest : MonoBehaviour
     private List<Message> failureMessages;
 
     private int buildingsPlaced = 0;
+
+    private bool triggered = false;
 
     public bool passedQuest( List<GameObject> nearBuildings )
     {
@@ -87,6 +92,11 @@ public class Quest : MonoBehaviour
         return ( targetBuilding );
     }
 
+    public Building.BuildingType getTriggerBuilding()
+    {
+        return ( triggerBuilding );
+    }
+
     public List<Message> getTriggerMessages()
     {
         return ( triggerMessages );
@@ -110,5 +120,15 @@ public class Quest : MonoBehaviour
     public List<string> getCharacters()
     {
         return ( characters );
+    }
+
+    public bool wasTriggered()
+    {
+        return ( triggered );
+    }
+
+    public void triggerQuest()
+    {
+        triggered = true;
     }
 }

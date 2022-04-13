@@ -53,22 +53,9 @@ public class GameManager : MonoBehaviour
         buildingPannelUI.GetComponent<BuildingPanelUI>().addBuildingSet( levels[currLevel].GetComponent<Level>().GetLevelInventory() );
 
 
-        // Set up any quests for this level
-        List<GameObject> tempQuests = levels[currLevel].GetComponent<Level>().GetQuests();
-        foreach( GameObject q in tempQuests )
-        {
-            Quest quest = q.GetComponent<Quest>();
-            List<Quest.Message> messages = quest.getTriggerMessages();
-
-            foreach( Quest.Message message in messages )
-            {
-                // Send out tweets!
-                dialogueManager.GetComponent<DialogueManager>().AddMessage( message );
-            }
-        }
-
+        // Set up quests for this level
         quests = quests.Concat( levels[currLevel].GetComponent<Level>().GetQuests() ).ToList();
-
+        triggerQuests( Building.BuildingType.Default );
 
         // TODO: HOW DO WE HANDLE PLAYER POINTS WHEN MOVING FROM ONE LEVEL TO NEXT?
     }
@@ -108,12 +95,15 @@ public class GameManager : MonoBehaviour
     // Call when place building
     public void checkQuests( Building.BuildingType type, List<GameObject> nearBuildings )
     {
+        // Trigger any quests that need to be triggered
+        triggerQuests( type );
+
         // Did we pass any quests? (fail any?) -> update relations
         foreach( GameObject q in quests )
         {
             Quest quest = q.GetComponent<Quest>();
 
-            // TODO: we should also make sure there are no other buildings of the same type?
+            // TODO: add check to see reverse (ie. school placed near low income OR income placed near school)
             if ( quest.getTargetBuilding() == type )
             {
                 // Did we pass or fail the quest
@@ -127,6 +117,26 @@ public class GameManager : MonoBehaviour
                 {
                     // We have failed
                     finishQuest( quest, false );
+                }
+            }
+        }
+    }
+
+    public void triggerQuests( Building.BuildingType triggerType )
+    {
+        foreach( GameObject q in quests )
+        {
+            Quest quest = q.GetComponent<Quest>();
+
+            if ( !quest.wasTriggered() && quest.getTriggerBuilding() == triggerType )
+            {
+                quest.triggerQuest();
+                List<Quest.Message> messages = quest.getTriggerMessages();
+
+                foreach( Quest.Message message in messages )
+                {
+                    // Send out tweets!
+                    dialogueManager.GetComponent<DialogueManager>().AddMessage( message );
                 }
             }
         }
