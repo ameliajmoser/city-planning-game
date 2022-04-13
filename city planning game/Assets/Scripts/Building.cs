@@ -21,7 +21,7 @@ public class Building : MonoBehaviour
     public int cost = 2;
 
     // Building object data
-    public Rigidbody rigidbody;
+    public Rigidbody rgbd;
     public GameObject radius;
     public TMP_Text points;
     public GameObject indicator;

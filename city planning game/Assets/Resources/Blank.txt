@@ -18,4 +18,28 @@
         <bad>
         </bad>
     </tweets>
+    <dialogue>
+        <entry>
+            <key>Add key here</key>
+            <dialogue>
+		<slide>
+                    Add dialogue here
+		</slide>
+                <slide>
+                    Add dialogue here
+		</slide>
+            </dialogue>
+        </entry>
+        <entry>
+            <key>Add unique key here</key>
+            <dialogue>
+                <slide>
+                    Add dialogue here
+		</slide>
+                <slide>
+                    Add dialogue here
+		</slide>
+            </dialogue>
+        </entry>
+    </dialogue>
 </character>

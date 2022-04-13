@@ -9,6 +9,9 @@ using TMPro;
 public class DialogueManager : MonoBehaviour {
 
 	[SerializeField]
+	private DialoguePopup dialoguePopup;
+
+	[SerializeField]
 	private GameObject dialogueContainer;
 
 	[SerializeField]
@@ -110,7 +113,7 @@ public class DialogueManager : MonoBehaviour {
 
 		// Update text
 		// TODO: update dialogue box profile picture
-		var dialogue = newBox.GetComponent<Dialogue>();
+		var dialogue = newBox.GetComponent<TweetDialogue>();
 		dialogue.messageHeader.text = tweet.header;
 		dialogue.messageBody.text = tweet.body;
 

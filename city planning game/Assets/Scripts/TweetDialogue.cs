@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Dialogue : MonoBehaviour
+public class TweetDialogue : MonoBehaviour
 {
     // Dialogue text
     public TMP_Text messageHeader;
