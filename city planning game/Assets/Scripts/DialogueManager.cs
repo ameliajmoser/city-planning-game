@@ -113,13 +113,7 @@ public class DialogueManager : MonoBehaviour {
 
 		// Update text
 		// TODO: update dialogue box profile picture
-
-		// For now grab random character
-		Character character = GetRandomCharacter();
-		Character.Tweet tweet = character.GetRandomTweet();
-
 		var dialogue = newBox.GetComponent<TweetDialogue>();
-
 		dialogue.messageHeader.text = tweet.header;
 		dialogue.messageBody.text = tweet.body;
 
