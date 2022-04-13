@@ -101,7 +101,7 @@ public class DialogueManager : MonoBehaviour {
 		if (lastRectTrans != null)
 		{
 			Vector2 newPos = new Vector2(lastRectTrans.localPosition.x, 
-										 lastRectTrans.localPosition.y - newRectTrans.rect.height);
+										 lastRectTrans.localPosition.y - (newRectTrans.rect.height+8));
 
 			newRectTrans.localPosition = newPos;
 
