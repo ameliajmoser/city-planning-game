@@ -21,6 +21,9 @@ public class DialogueManager : MonoBehaviour {
     [SerializeField]
 	private float interval = 10.0f;
 
+	[SerializeField]
+	private int postSpacing = 5;
+
 	RectTransform containerRectTrans;
 
 	// Keeps track of the transform of the previous addition
@@ -101,7 +104,7 @@ public class DialogueManager : MonoBehaviour {
 		if (lastRectTrans != null)
 		{
 			Vector2 newPos = new Vector2(lastRectTrans.localPosition.x, 
-										 lastRectTrans.localPosition.y - newRectTrans.rect.height);
+										 lastRectTrans.localPosition.y - (newRectTrans.rect.height+postSpacing));
 
 			newRectTrans.localPosition = newPos;
 
