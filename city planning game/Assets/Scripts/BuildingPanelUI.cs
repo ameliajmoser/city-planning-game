@@ -25,17 +25,17 @@ public class BuildingPanelUI : MonoBehaviour
         buildingButtonTemplate = transform.Find( "BuildingButtonTemplate" );
         buildingButtonTemplate.gameObject.SetActive( false );
 
-        int index = 0;
-        foreach ( GameObject buildingPrefab in buildingPrefabs )
-        {
-            if ( index > MAX_INVENTORY_SIZE - 1 )
-            {
-                break;
-            }
+        // int index = 0;
+        // foreach ( GameObject buildingPrefab in buildingPrefabs )
+        // {
+        //     if ( index > MAX_INVENTORY_SIZE - 1 )
+        //     {
+        //         break;
+        //     }
 
-            addButton( buildingPrefab ); 
-            index++;
-        }
+        //     addButton( buildingPrefab ); 
+        //     index++;
+        // }
     }
 
     private void addButton( GameObject buildingPrefab )
@@ -54,9 +54,6 @@ public class BuildingPanelUI : MonoBehaviour
     public void removeButton( Transform transform )
     {
         Destroy( transform.gameObject );
-
-        // TODO: this is just temporary unitl we have levels
-        addRandomBuilding();
     }
 
     public void addRandomBuilding()
@@ -102,5 +99,18 @@ public class BuildingPanelUI : MonoBehaviour
     public int numInInventory()
     {
         return ( buttons.Count );
+    }
+
+    public void clearInventory()
+    {
+        foreach( Transform transform in buttons )
+        {
+            if ( transform )
+            {
+                Destroy( transform.gameObject );
+            }
+        }
+
+        buttons = new List<Transform>();
     }
 }

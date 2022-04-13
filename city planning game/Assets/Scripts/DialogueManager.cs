@@ -32,6 +32,8 @@ public class DialogueManager : MonoBehaviour {
 	// List of characters to select tweet from
 	private List<Character> characters;
 
+	private List<Quest.Message> messages;
+
 	void Awake ()
 	{
 		// Init characters
@@ -50,6 +52,9 @@ public class DialogueManager : MonoBehaviour {
 		characters.Add( new Character( "Sports-Channel" ) ); // city sports channel
 		characters.Add( new Character( "Blank" ) );
 
+		// Messages
+		messages = new List<Quest.Message>();
+
 		// Dialogue container
 		containerRectTrans = dialogueContainer.GetComponent<RectTransform>();
 
@@ -66,7 +71,18 @@ public class DialogueManager : MonoBehaviour {
 			// Check if not null
 			if ( textBoxPrefab )
 			{
-				AddDialogueBox();
+				if ( messages.Count > 0 )
+				{
+					pushMessage( messages[0] );
+					messages.RemoveAt( 0 );
+				}
+				else
+				{
+					Character character = GetRandomCharacter();
+					Character.Tweet tweet = character.GetRandomTweet();
+
+					AddDialogueBox( character, tweet );
+				}
 			}
 
 			yield return new WaitForSeconds( interval );
@@ -74,7 +90,7 @@ public class DialogueManager : MonoBehaviour {
 	}
 
 	// Add box
-	void AddDialogueBox()
+	void AddDialogueBox( Character character, Character.Tweet tweet )
 	{
 		RectTransform containerRectTrans = dialogueContainer.GetComponent<RectTransform>();
 
@@ -103,6 +119,7 @@ public class DialogueManager : MonoBehaviour {
 		Character.Tweet tweet = character.GetRandomTweet();
 
 		var dialogue = newBox.GetComponent<TweetDialogue>();
+
 		dialogue.messageHeader.text = tweet.header;
 		dialogue.messageBody.text = tweet.body;
 
@@ -137,5 +154,39 @@ public class DialogueManager : MonoBehaviour {
 	{
 		int randInt = Random.Range( 0, characters.Count - 1 );
 		return characters[randInt];
+	}
+
+	public List<Character> getCharacters()
+	{
+		return ( characters );
+	}
+
+	public void pushMessage( Quest.Message message )
+	{	
+		Character character = getCharacter( message.character );
+
+		if ( character != null )
+		{
+			Character.Tweet tweet = message.tweet;
+			AddDialogueBox( character, tweet );
+		}
+	}
+
+	public void AddMessage( Quest.Message message )
+	{
+		messages.Add( message );
+	}
+
+	public Character getCharacter( string name )
+	{
+		foreach( Character character in characters )
+		{	
+			if ( character.getCharacterName().Equals( name ) )
+			{
+				return character;
+			}
+		}
+
+		return null;
 	}
 }

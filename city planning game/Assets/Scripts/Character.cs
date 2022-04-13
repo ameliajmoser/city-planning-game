@@ -6,6 +6,7 @@ using System.Xml.Serialization;
 
 public class Character
 {
+    [System.Serializable]
     public struct Tweet
     {
         public string header;
@@ -27,6 +28,9 @@ public class Character
     private Dictionary<string, Dialogue> dialogueDict;
     private string profilePath;
     private string characterName;
+
+    private int questsPassed = 0;
+    private int questsFailed = 0;
 
     public Character( string fileName )
     {
@@ -90,5 +94,30 @@ public class Character
     public Dialogue GetDialogue(string key)
     {
         return dialogueDict[key];
+    }
+  
+    public void passQuest()
+    {
+        questsPassed += 1;
+    }
+
+    public void failQuest()
+    {
+        questsFailed += 1;
+    }
+
+    public int getPassedQuests()
+    {
+        return ( questsPassed );
+    }
+
+    public int getFailedQuests()
+    {
+        return ( questsFailed );
+    }
+
+    public string getCharacterName()
+    {
+        return ( characterName );
     }
 }

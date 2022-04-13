@@ -150,7 +150,7 @@ MonoBehaviour:
     points: -2
   - buildingType: 8
     points: 0
-  cost: 2
+  cost: 0
   rigidbody: {fileID: 0}
   radius: {fileID: 3792663428270404345}
   points: {fileID: 2808886467738296294}
