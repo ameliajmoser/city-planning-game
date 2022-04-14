@@ -23,10 +23,13 @@ public class PlacementController : MonoBehaviour
     {
         if ( Input.GetKeyDown( KeyCode.Escape )  || Input.GetKeyDown(KeyCode.Mouse1))
         {
-            var building = currentPlaceableObject.GetComponent<Building>();
-            building.ClearIndicators();
+            if ( currentPlaceableObject )
+            {
+                var building = currentPlaceableObject.GetComponent<Building>();
+                building.ClearIndicators();
 
-            Destroy( currentPlaceableObject );
+                Destroy( currentPlaceableObject );
+            }
         }
 
         if (currentPlaceableObject != null)
