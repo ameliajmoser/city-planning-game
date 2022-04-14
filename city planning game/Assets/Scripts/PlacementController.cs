@@ -45,12 +45,12 @@ public class PlacementController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hitInfo;
-        int layerMask = LayerMask.GetMask("Ground");
+        int layerMask = LayerMask.GetMask("Ground") | LayerMask.GetMask("Water");
         if (Physics.Raycast(ray, out hitInfo, 100.0f, layerMask))
         {
             currentPlaceableObject.transform.position = hitInfo.point;
-            currentPlaceableObject.transform.rotation = Quaternion.Euler(Vector3.zero);
         }
+        currentPlaceableObject.transform.rotation = Quaternion.Euler(Vector3.zero);
     }
 
     private void RotateFromMouseWheel()
