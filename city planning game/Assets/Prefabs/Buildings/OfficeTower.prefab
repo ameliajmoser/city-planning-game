@@ -137,21 +137,21 @@ MonoBehaviour:
   - buildingType: 1
     points: 1
   - buildingType: 2
-    points: -1
+    points: 2
   - buildingType: 3
-    points: -1
+    points: 0
   - buildingType: 4
     points: 2
   - buildingType: 5
-    points: 1
+    points: 0
   - buildingType: 6
     points: 2
   - buildingType: 7
-    points: -1
+    points: 0
   - buildingType: 8
-    points: 1
+    points: 2
   cost: 0
-  rigidbody: {fileID: 0}
+  rgbd: {fileID: 0}
   radius: {fileID: 3792663428270404345}
   points: {fileID: 2808886467738296294}
   indicator: {fileID: 2274766981012415014}
