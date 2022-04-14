@@ -183,4 +183,9 @@ public class DialogueManager : MonoBehaviour {
 
 		return null;
 	}
+
+	public void QueueDialoguePopup( Character character, string key )
+	{
+		dialoguePopup.QueueDialoguePopup( character, key );
+	}
 }

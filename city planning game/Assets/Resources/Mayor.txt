@@ -1,5 +1,5 @@
 <character>
-    <name>Mayor</name>
+    <name>Mayor Wilson</name>
     <sprite>FILE_PATH</sprite>
     <tweets>
         <random>
@@ -21,4 +21,26 @@
         <bad>
         </bad>
     </tweets>
+    <dialogue>
+        <entry>
+            <key>Introduction</key>
+            <dialogue>
+		        <slide>
+                    Welcome to your new office. To help with all your city-planning needs, we’ve given you access to our most advanced software.
+		        </slide>
+                <slide>
+                    This program streamlines the entire city-planning process by combining economic and other growth factors all into a single score you can find in the upper left of the interface. Keep an eye on that bar and make sure to fill it up to continue growing our great city. 
+		        </slide>
+                <slide>
+                You’ll find the available buildings for construction along the bottom of the interface.
+                </slide>
+                <slide>
+                If you feel like checking in on some of the citizens in our wonderful city, feel free to open the social media feed to see what they have to say.
+                </slide>
+                <slide>
+                Best of luck to you on your city planning!
+                </slide>
+            </dialogue>
+        </entry>
+    </dialogue>
 </character>

@@ -32,9 +32,22 @@ public class GameManager : MonoBehaviour
 
     private List<GameObject> quests;
 
+    public enum GameState
+    {
+        STOPPED,
+        PAUSED,
+        RUNNING,
+    }
+
+    private GameState currGameState = GameState.STOPPED;
+
     // Start is called before the first frame update
     private void Start()
     {
+        // Trigger introduction
+        Character mayor = dialogueManager.GetComponent<DialogueManager>().getCharacter( "Mayor Wilson" );
+        dialogueManager.GetComponent<DialogueManager>().QueueDialoguePopup( mayor, "Introduction" );
+
         mouseInput.OnMouseDown += HandleMouseClick;
         quests = new List<GameObject>();
 
