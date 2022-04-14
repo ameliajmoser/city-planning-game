@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44708014, g: 0.4969833, b: 0.575102, a: 1}
+  m_IndirectSpecularColor: {r: 0.44707966, g: 0.49698246, b: 0.57510084, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2083,6 +2083,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 10205535}
     m_Modifications:
+    - target: {fileID: 1000247956292339986, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: transitionList.Array.data[2]
+      value: 
+      objectReference: {fileID: 128530071}
+    - target: {fileID: 3691957273088334045, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[1].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 128530071}
+    - target: {fileID: 3691957273088334045, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[1].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: TriggerTransition
+      objectReference: {fileID: 0}
     - target: {fileID: 5549677100243468878, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
       propertyPath: m_Name
       value: Dialogue Popup
