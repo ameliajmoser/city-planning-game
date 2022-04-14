@@ -135,13 +135,13 @@ MonoBehaviour:
   affinityRadius: 10
   affinities:
   - buildingType: 1
-    points: 2
+    points: 1
   - buildingType: 2
-    points: -1
+    points: 0
   - buildingType: 3
-    points: -1
+    points: 0
   - buildingType: 4
-    points: -3
+    points: 0
   - buildingType: 5
     points: 1
   - buildingType: 6
@@ -151,7 +151,7 @@ MonoBehaviour:
   - buildingType: 8
     points: 1
   cost: 0
-  rigidbody: {fileID: 0}
+  rgbd: {fileID: 0}
   radius: {fileID: 3792663428270404345}
   points: {fileID: 2808886467738296294}
   indicator: {fileID: 4091398471248316107}
