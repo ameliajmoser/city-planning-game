@@ -104,11 +104,7 @@ public class Building : MonoBehaviour
         }
 
         // We can probably do this real inefficiently cuz the number of buildings is so small I hope
-        foreach (var hitBuilding in activeBuildings)
-        {
-            hitBuilding.GetComponent<Building>().indicator.SetActive( false );
-        }
-
+        ClearIndicators();
         foreach (var hitBuilding in newActiveBuildings)
         {
             hitBuilding.GetComponent<Building>().indicator.SetActive( true );
@@ -157,12 +153,17 @@ public class Building : MonoBehaviour
         currState = PlacementState.Placed;
         currPoints = ComputeScore();
 
+        ClearIndicators();
+
+        return ( currPoints );
+    }
+
+    public void ClearIndicators()
+    {
         foreach (var hitBuilding in activeBuildings)
         {
             hitBuilding.GetComponent<Building>().indicator.SetActive( false );
         }
-
-        return ( currPoints );
     }
 
     public List<GameObject> getActiveBuildings()
