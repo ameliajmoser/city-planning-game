@@ -27,10 +27,7 @@ public class PlayerManager : MonoBehaviour
         currScore += amt;
         
         // TODO: this is just for the demo - remove this
-        if ( currScore > 100 ) {
-            currScore = 100;
-        }
-        else if ( currScore < 0 )
+        if ( currScore < 0 )
         {
             currScore = 0;
         }
