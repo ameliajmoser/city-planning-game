@@ -26,19 +26,19 @@
             <key>Introduction</key>
             <dialogue>
 		        <slide>
-                    Welcome to your new office. To help with all your city-planning needs, we’ve given you access to our most advanced software.
+                    Well howdy there kid! You must be our new city planner. I suppose I should introduce you to our fancy planning doohickey here!
 		        </slide>
                 <slide>
-                    This program streamlines the entire city-planning process by combining economic and other growth factors all into a single score you can find in the upper left of the interface. Keep an eye on that bar and make sure to fill it up to continue growing our great city. 
+                    Now I can't begin to understand it, but apparently this here simulation lets you plan our city. We send you the building proposals, you plonk 'em down as you see fit, and they get built! What a time to be alive!
 		        </slide>
                 <slide>
-                You’ll find the available buildings for construction along the bottom of the interface.
+                    Those geniuses streamlined all the boring old political and budgetary concerns into those POINTS. So you can just focus on the planning, and make sure you get enough for the next round of proposals.
+		        </slide>
+                <slide>
+                    Oh, and they put some kinda app on your phone too. Apparently it keeps track of what people are saying about the city. But I've never been so good with those computers... My nephew usually does that stuff for me.
                 </slide>
                 <slide>
-                If you feel like checking in on some of the citizens in our wonderful city, feel free to open the social media feed to see what they have to say.
-                </slide>
-                <slide>
-                Best of luck to you on your city planning!
+                    Good luck, kid! Don't let us down.
                 </slide>
             </dialogue>
         </entry>
