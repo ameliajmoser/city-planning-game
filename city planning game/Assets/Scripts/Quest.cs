@@ -50,6 +50,7 @@ public class Quest : MonoBehaviour
     private int buildingsPlaced = 0;
 
     private bool triggered = false;
+    private bool finished = false;
 
     public bool passedQuest( List<GameObject> nearBuildings )
     {
@@ -130,5 +131,15 @@ public class Quest : MonoBehaviour
     public void triggerQuest()
     {
         triggered = true;
+    }
+
+    public bool isFinished()
+    {
+        return ( finished );
+    }
+
+    public void finish()
+    {
+        finished = true;
     }
 }

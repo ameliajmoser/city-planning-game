@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     private int currLevel = 0;
 
     private List<GameObject> quests;
+    private List<GameObject> finishedQuests;
 
     public enum GameState
     {
@@ -50,6 +51,7 @@ public class GameManager : MonoBehaviour
 
         mouseInput.OnMouseDown += HandleMouseClick;
         quests = new List<GameObject>();
+        finishedQuests = new List<GameObject>();
 
         setUp();
     }
@@ -117,21 +119,31 @@ public class GameManager : MonoBehaviour
             Quest quest = q.GetComponent<Quest>();
 
             // TODO: add check to see reverse (ie. school placed near low income OR income placed near school)
-            if ( quest.getTargetBuilding() == type )
+            if ( quest.getTargetBuilding() == type && !quest.isFinished() )
             {
                 // Did we pass or fail the quest
                 if ( quest.passedQuest( nearBuildings ) )
                 {
                     // We have passed
-                    finishQuest( quest, true );
+                    finishQuest( q, true );
                     
                 }
                 else if ( quest.failedQuest() )
                 {
                     // We have failed
-                    finishQuest( quest, false );
+                    finishQuest( q, false );
                 }
             }
+        }
+
+        foreach ( GameObject quest in finishedQuests )
+        {
+            quests.Remove( quest );
+        }
+
+        if ( finishedQuests.Count() > 0 )
+        {
+            finishedQuests = new List<GameObject>();
         }
     }
 
@@ -155,8 +167,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void finishQuest( Quest quest, bool passed )
+    public void finishQuest( GameObject q, bool passed )
     {
+        Quest quest = q.GetComponent<Quest>();
+
         // Send out victory or failure tweets
         List<Quest.Message> messages = passed ? quest.getSuccessMessages() : quest.getFailureMessages();
 
@@ -185,6 +199,11 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+
+        quest.finish();
+
+        // Remove quest from list!
+        finishedQuests.Add( q );
     }
 
     // Call when placing bulding
