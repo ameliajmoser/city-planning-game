@@ -42,5 +42,19 @@
                 </slide>
             </dialogue>
         </entry>
+        <entry>
+            <key>Failure</key>
+            <dialogue>
+		        <slide>
+                    Oh no! The city has run out of funds for development!
+		        </slide>
+                <slide>
+                    I guess this is how big our city will get.
+		        </slide>
+                <slide>
+                    Better luck next time kid.
+		        </slide>
+            </dialogue>
+        </entry>
     </dialogue>
 </character>

@@ -21,4 +21,17 @@
         <bad>
         </bad>
     </tweets>
+    <dialogue>
+        <entry>
+            <key>BailOut</key>
+            <dialogue>
+		        <slide>
+                    Got a call from Mayor Marshall saying city-development has mostly stalled out due to lack of funding.
+		        </slide>
+                <slide>
+                    Tell you what, if you okay the building of one more oil plant, I’ll make sure they get you the returns to keep developing the city.
+		        </slide>
+            </dialogue>
+        </entry>
+    </dialogue>
 </character>
