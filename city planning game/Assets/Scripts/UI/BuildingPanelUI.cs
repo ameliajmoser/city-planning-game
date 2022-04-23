@@ -68,7 +68,7 @@ public class BuildingPanelUI : MonoBehaviour
     {
         bool allAdded = false;
 
-        if ( buttons.Count + prefabs.Count < MAX_INVENTORY_SIZE )
+        if ( buttons.Count + prefabs.Count <= MAX_INVENTORY_SIZE )
         {
             foreach ( GameObject prefab in prefabs )
             {
@@ -85,7 +85,7 @@ public class BuildingPanelUI : MonoBehaviour
     {
         bool hasAdded = false;
 
-        while ( numInInventory() < MAX_INVENTORY_SIZE && prefabs.Count > 0 )
+        while ( numInInventory() <= MAX_INVENTORY_SIZE && prefabs.Count > 0 )
         {
             addButton( prefabs[0] );
             prefabs.RemoveAt( 0 );
