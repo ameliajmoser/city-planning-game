@@ -18,7 +18,7 @@ public class Building : MonoBehaviour
     public List<BuildingAffinity> affinities = new List<BuildingAffinity>();
 
     [SerializeField]
-    public int cost = 2;
+    public int cost = 0;
 
     // Building object data
     public Rigidbody rgbd;
@@ -34,13 +34,19 @@ public class Building : MonoBehaviour
     public enum BuildingType
     {
         Default,
-        HouseSmall,
-        HouseSuburb,
+        School,
         Factory,
         ApartmentLuxury,
-        ApartmentLowIncome,
         Office,
-        School,
+        ApartmentLowIncome,
+        HouseSmall,
+        HouseSuburb,
+        Hospital,
+        Warehouse,
+        OilRig,
+        Mansion,
+        Mall,
+        FastFood,
         CityHall,
     }
 
@@ -112,7 +118,7 @@ public class Building : MonoBehaviour
 
         activeBuildings = newActiveBuildings;
 
-        score -= cost;
+        score += cost;
 
         return ( score );
     }
