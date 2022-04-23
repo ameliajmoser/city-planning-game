@@ -18,6 +18,9 @@ public class BuildingPanelUI : MonoBehaviour
     [SerializeField]
     private int MAX_INVENTORY_SIZE = 7;
 
+    [SerializeField]
+    private GameObject oilRigPrefab;
+
     private void Awake()
     {
         buttons = new List<Transform>();
@@ -54,6 +57,7 @@ public class BuildingPanelUI : MonoBehaviour
     public void removeButton( Transform transform )
     {
         Destroy( transform.gameObject );
+        buttons.Remove( transform );
     }
 
     public void addRandomBuilding()
@@ -112,5 +116,11 @@ public class BuildingPanelUI : MonoBehaviour
         }
 
         buttons = new List<Transform>();
+    }
+
+    public void addOilRig( int cost )
+    {
+        oilRigPrefab.GetComponent<Building>().cost = cost;
+        addButton( oilRigPrefab );
     }
 }

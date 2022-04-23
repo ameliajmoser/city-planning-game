@@ -191,4 +191,9 @@ public class DialogueManager : MonoBehaviour {
 	{
 		dialoguePopup.QueueDialoguePopup( character, key );
 	}
+
+	public bool DialoguePopupOpen()
+	{
+		return ( dialoguePopup.IsOpen() );
+	}
 }

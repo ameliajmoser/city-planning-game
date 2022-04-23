@@ -55,4 +55,9 @@ public class DialoguePopup : MonoBehaviour
             }
         }
     }
+
+    public bool IsOpen()
+    {
+        return ( dialogueOpen );
+    }
 }
