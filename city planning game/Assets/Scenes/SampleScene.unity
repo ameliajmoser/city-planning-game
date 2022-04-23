@@ -725,6 +725,7 @@ MonoBehaviour:
   - {fileID: 2008035343353864571, guid: b6ae8d325d38f224eb3be3d663c33b0b, type: 3}
   - {fileID: 2008035343353864571, guid: e1bfeee40f8ad2c4e985ec6b47009d5b, type: 3}
   MAX_INVENTORY_SIZE: 7
+  oilRigPrefab: {fileID: 2008035343353864571, guid: 530a48ff36318d846a61a341fd303313, type: 3}
 --- !u!1 &227363472
 GameObject:
   m_ObjectHideFlags: 0
