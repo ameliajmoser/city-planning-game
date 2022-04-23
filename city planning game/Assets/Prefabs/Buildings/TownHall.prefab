@@ -218,6 +218,8 @@ MonoBehaviour:
   affinities:
   - buildingType: 1
     points: 0
+  - buildingType: 14
+    points: 0
   - buildingType: 2
     points: 0
   - buildingType: 3
@@ -232,12 +234,22 @@ MonoBehaviour:
     points: 0
   - buildingType: 8
     points: 0
+  - buildingType: 9
+    points: 0
+  - buildingType: 10
+    points: 0
+  - buildingType: 11
+    points: 0
+  - buildingType: 12
+    points: 0
+  - buildingType: 13
+    points: 0
   cost: 0
-  rigidbody: {fileID: 0}
+  rgbd: {fileID: 0}
   radius: {fileID: 3792663428270404345}
   points: {fileID: 2808886467738296294}
   indicator: {fileID: 1869504817893954562}
-  buildingType: 8
+  buildingType: 14
 --- !u!65 &2538615943550538286
 BoxCollider:
   m_ObjectHideFlags: 0

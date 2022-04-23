@@ -135,27 +135,39 @@ MonoBehaviour:
   affinityRadius: 7
   affinities:
   - buildingType: 1
-    points: 1
-  - buildingType: 2
-    points: 2
-  - buildingType: 3
     points: 0
+  - buildingType: 14
+    points: 2
+  - buildingType: 2
+    points: -3
+  - buildingType: 3
+    points: 2
   - buildingType: 4
     points: 2
   - buildingType: 5
     points: 0
   - buildingType: 6
-    points: 2
+    points: 1
   - buildingType: 7
-    points: 0
-  - buildingType: 8
     points: 2
+  - buildingType: 8
+    points: 0
+  - buildingType: 9
+    points: 0
+  - buildingType: 10
+    points: -2
+  - buildingType: 11
+    points: 0
+  - buildingType: 12
+    points: 0
+  - buildingType: 13
+    points: 0
   cost: 0
   rgbd: {fileID: 0}
   radius: {fileID: 3792663428270404345}
   points: {fileID: 2808886467738296294}
   indicator: {fileID: 2274766981012415014}
-  buildingType: 6
+  buildingType: 4
 --- !u!65 &2538615943550538286
 BoxCollider:
   m_ObjectHideFlags: 0
