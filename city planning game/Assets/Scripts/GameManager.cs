@@ -108,7 +108,6 @@ public class GameManager : MonoBehaviour
         }
         else if ( buildingPannelUI.GetComponent<BuildingPanelUI>().numInInventory() == 0 )
         {
-            Debug.Log("FAILED LEVEL");
             // We have failed the level
             // We offer one time bailout by oil baron then we fail the game
             if ( !firstFail )
@@ -129,7 +128,7 @@ public class GameManager : MonoBehaviour
                 dialogueManager.GetComponent<DialogueManager>().QueueDialoguePopup( mayor, "Failure" );
 
                 secondFail = true;
-                Invoke("SetQuit", 2.0f);
+                Invoke("SetQuit", 2.0f); // Do this to handle thread stuff :(
             }
 
             // Go to main menu

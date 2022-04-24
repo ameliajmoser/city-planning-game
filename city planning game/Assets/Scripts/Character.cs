@@ -28,6 +28,7 @@ public class Character
     private Dictionary<string, Dialogue> dialogueDict;
     private string profilePath;
     private string characterName;
+    private Sprite characterArt;
 
     private int questsPassed = 0;
     private int questsFailed = 0;
@@ -45,6 +46,9 @@ public class Character
     
         loadXML();
         parseXML();
+
+        // Load character sprite
+        characterArt = Resources.Load<Sprite>( "Portraits/" + profilePath );
     }
 
     private void loadXML()
@@ -119,5 +123,10 @@ public class Character
     public string getCharacterName()
     {
         return ( characterName );
+    }
+
+    public Sprite GetCharacterArt()
+    {
+        return ( characterArt );
     }
 }

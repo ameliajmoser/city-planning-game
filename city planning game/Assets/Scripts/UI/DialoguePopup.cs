@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class DialoguePopup : MonoBehaviour
@@ -10,6 +11,9 @@ public class DialoguePopup : MonoBehaviour
     
     [SerializeField]
     private TMP_Text bodyText;
+
+    [SerializeField]
+    private GameObject characterArt;
 
     [SerializeField]
     private UITransitionManager[] transitionList;
@@ -28,6 +32,9 @@ public class DialoguePopup : MonoBehaviour
     public void QueueDialoguePopup( Character character, string key ) {
         Character.Dialogue dialogue = character.GetDialogue(key);
         nameText.text = dialogue.name;
+
+        characterArt.GetComponent<Image>().sprite = character.GetCharacterArt();
+
         slides = new List<string>(dialogue.slides);
         bodyText.text = slides[0];
         currentSlide = 0;
