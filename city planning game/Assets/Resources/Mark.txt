@@ -1,6 +1,6 @@
 <character>
     <name>Mark</name>
-    <sprite>FILE_PATH</sprite>
+    <sprite>mark</sprite>
     <tweets>
         <random>
             <tweet>

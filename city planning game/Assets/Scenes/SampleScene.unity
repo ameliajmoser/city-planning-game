@@ -725,6 +725,7 @@ MonoBehaviour:
   - {fileID: 2008035343353864571, guid: b6ae8d325d38f224eb3be3d663c33b0b, type: 3}
   - {fileID: 2008035343353864571, guid: e1bfeee40f8ad2c4e985ec6b47009d5b, type: 3}
   MAX_INVENTORY_SIZE: 7
+  oilRigPrefab: {fileID: 2008035343353864571, guid: 530a48ff36318d846a61a341fd303313, type: 3}
 --- !u!1 &227363472
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +909,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &395565648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 318836652417572671, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+  m_PrefabInstance: {fileID: 1709906060}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &492192941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6262953333801497772, guid: 530a48ff36318d846a61a341fd303313, type: 3}
@@ -1398,7 +1404,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.0004939386}
   m_SizeDelta: {x: 0, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &922360002
@@ -2179,6 +2185,11 @@ MonoBehaviour:
   - {fileID: 2008035343353864571, guid: add420d817d3a77498d5403f57a608a4, type: 3}
   - {fileID: 2008035343353864571, guid: 3ff2c10747b63c8fcacffe181c4e305a, type: 3}
   quests: []
+--- !u!1 &1469695517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7067145053282095749, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+  m_PrefabInstance: {fileID: 1709906060}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1490842920
 GameObject:
   m_ObjectHideFlags: 0
@@ -2282,6 +2293,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 10205535}
     m_Modifications:
+    - target: {fileID: 1000247956292339986, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1469695517}
+    - target: {fileID: 1000247956292339986, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: characterArt
+      value: 
+      objectReference: {fileID: 395565648}
     - target: {fileID: 1000247956292339986, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
       propertyPath: transitionList.Array.data[2]
       value: 

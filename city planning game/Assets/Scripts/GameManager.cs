@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -41,6 +42,10 @@ public class GameManager : MonoBehaviour
     }
 
     private GameState currGameState = GameState.STOPPED;
+
+    private bool firstFail = false;
+    private bool secondFail = false;
+    private bool timeToQuit = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -104,7 +109,39 @@ public class GameManager : MonoBehaviour
         else if ( buildingPannelUI.GetComponent<BuildingPanelUI>().numInInventory() == 0 )
         {
             // We have failed the level
+            // We offer one time bailout by oil baron then we fail the game
+            if ( !firstFail )
+            {
+                // oil baron
+                Character oilBaron = dialogueManager.GetComponent<DialogueManager>().getCharacter( "Gulliver" );
+                dialogueManager.GetComponent<DialogueManager>().QueueDialoguePopup( oilBaron, "BailOut" );
+
+                // Add oil rig to inventory
+                int pointsNeeded = pointGoal - currScore;
+                buildingPannelUI.GetComponent<BuildingPanelUI>().addOilRig( pointsNeeded );
+
+                firstFail = true;
+            }
+            else if ( !secondFail )
+            {
+                Character mayor = dialogueManager.GetComponent<DialogueManager>().getCharacter( "Mayor Wilson" );
+                dialogueManager.GetComponent<DialogueManager>().QueueDialoguePopup( mayor, "Failure" );
+
+                secondFail = true;
+                Invoke("SetQuit", 2.0f); // Do this to handle thread stuff :(
+            }
+
+            // Go to main menu
+            if ( timeToQuit && secondFail && !dialogueManager.GetComponent<DialogueManager>().DialoguePopupOpen() )
+            {
+                SceneManager.LoadScene("Main Menu");
+            }
         }
+    }
+
+    public void SetQuit()
+    {
+        timeToQuit = true;
     }
 
     // Call when place building
