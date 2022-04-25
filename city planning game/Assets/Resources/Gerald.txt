@@ -4,9 +4,6 @@
     <tweets>
         <random>
             <tweet>
-                Why so many oil plants?! That's difficult labor for not enough pay!
-            </tweet>
-            <tweet>
                 We need good-paying jobs closer to our homes! Not just filthy oil plants.
             </tweet>
             <tweet>

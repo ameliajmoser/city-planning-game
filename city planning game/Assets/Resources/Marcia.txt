@@ -4,16 +4,10 @@
     <tweets>
         <random>
             <tweet>
-                Ugh...what's up with all this new housing. Its pushing my mansion's building costs sky high.
-            </tweet>
-            <tweet>
                 Swipe up to help Save the Turtles!!
             </tweet>
             <tweet>
                 My new movie premieres tonight! Make sure to to get out and see it.
-            </tweet>
-            <tweet>
-                They want to build a new subdivision near my mansion. It's going to ruin the serenity!!
             </tweet>
         </random>
         <good>
