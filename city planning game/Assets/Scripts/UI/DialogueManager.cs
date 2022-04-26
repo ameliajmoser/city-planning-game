@@ -115,10 +115,10 @@ public class DialogueManager : MonoBehaviour {
 		CheckContainerLength();
 
 		// Update text
-		// TODO: update dialogue box profile picture
 		var dialogue = newBox.GetComponent<TweetDialogue>();
 		dialogue.messageHeader.text = tweet.header;
 		dialogue.messageBody.text = tweet.body;
+		dialogue.profile.sprite = character.GetProfileArt();
 
 		// Push scroll bar to bottom of feed
 		GameObject.Find("ScrollRect").GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;

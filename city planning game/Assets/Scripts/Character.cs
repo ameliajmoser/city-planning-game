@@ -29,6 +29,7 @@ public class Character
     private string profilePath;
     private string characterName;
     private Sprite characterArt;
+    private Sprite profileArt;
 
     private int questsPassed = 0;
     private int questsFailed = 0;
@@ -49,6 +50,7 @@ public class Character
 
         // Load character sprite
         characterArt = Resources.Load<Sprite>( "Portraits/" + profilePath );
+        profileArt = Resources.Load<Sprite>( "Profiles/" + profilePath );
     }
 
     private void loadXML()
@@ -128,5 +130,10 @@ public class Character
     public Sprite GetCharacterArt()
     {
         return ( characterArt );
+    }
+
+    public Sprite GetProfileArt()
+    {
+        return ( profileArt );
     }
 }
