@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44708014, g: 0.4969833, b: 0.575102, a: 1}
+  m_IndirectSpecularColor: {r: 0.44707966, g: 0.49698246, b: 0.57510084, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -402,7 +402,7 @@ MonoBehaviour:
   - {fileID: 2008035343353864571, guid: 2cd9aa2a48b4b7c37a807bf0ed378f76, type: 3}
   - {fileID: 2008035343353864571, guid: f317f1e6cbb7a46daac90949f9aa6f34, type: 3}
   - {fileID: 2008035343353864571, guid: f317f1e6cbb7a46daac90949f9aa6f34, type: 3}
-  - {fileID: 2008035343353864571, guid: fe5b737f1cc309d49ad8aa58bb4f56ba, type: 3}
+  - {fileID: 2008035343353864571, guid: c66c13f04991bee85b8642a1b1f2f8ae, type: 3}
   quests: []
 --- !u!1 &46292376
 GameObject:
@@ -1123,12 +1123,13 @@ MonoBehaviour:
   mPointGoal: 100
   inventory:
   - {fileID: 2008035343353864571, guid: f317f1e6cbb7a46daac90949f9aa6f34, type: 3}
-  - {fileID: 2008035343353864571, guid: f317f1e6cbb7a46daac90949f9aa6f34, type: 3}
+  - {fileID: 2008035343353864571, guid: fe5b737f1cc309d49ad8aa58bb4f56ba, type: 3}
   - {fileID: 2008035343353864571, guid: add420d817d3a77498d5403f57a608a4, type: 3}
   - {fileID: 2008035343353864571, guid: add420d817d3a77498d5403f57a608a4, type: 3}
   - {fileID: 2008035343353864571, guid: 92d84550b647f8f41b9feab8481c5dcb, type: 3}
   - {fileID: 2008035343353864571, guid: 92d84550b647f8f41b9feab8481c5dcb, type: 3}
-  quests: []
+  quests:
+  - {fileID: 1989598148}
 --- !u!1 &333695812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2906,7 +2907,8 @@ MonoBehaviour:
   - {fileID: 2008035343353864571, guid: 1706c40582355627e95f71b8ac01ec6e, type: 3}
   - {fileID: 2008035343353864571, guid: 1706c40582355627e95f71b8ac01ec6e, type: 3}
   - {fileID: 2008035343353864571, guid: fe5b737f1cc309d49ad8aa58bb4f56ba, type: 3}
-  quests: []
+  quests:
+  - {fileID: 1170169345}
 --- !u!1 &1112014474
 GameObject:
   m_ObjectHideFlags: 0
@@ -2956,7 +2958,7 @@ MonoBehaviour:
   - {fileID: 2008035343353864571, guid: e1bfeee40f8ad2c4e985ec6b47009d5b, type: 3}
   - {fileID: 2008035343353864571, guid: f317f1e6cbb7a46daac90949f9aa6f34, type: 3}
   - {fileID: 2008035343353864571, guid: 2cd9aa2a48b4b7c37a807bf0ed378f76, type: 3}
-  - {fileID: 2008035343353864571, guid: fe5b737f1cc309d49ad8aa58bb4f56ba, type: 3}
+  - {fileID: 2008035343353864571, guid: 2cd9aa2a48b4b7c37a807bf0ed378f76, type: 3}
   - {fileID: 2008035343353864571, guid: b6ae8d325d38f224eb3be3d663c33b0b, type: 3}
   quests: []
 --- !u!1 &1130773542
@@ -3011,6 +3013,70 @@ MonoBehaviour:
   - {fileID: 2008035343353864571, guid: f317f1e6cbb7a46daac90949f9aa6f34, type: 3}
   - {fileID: 2008035343353864571, guid: c66c13f04991bee85b8642a1b1f2f8ae, type: 3}
   quests: []
+--- !u!1 &1170169345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1170169346}
+  - component: {fileID: 1170169347}
+  m_Layer: 0
+  m_Name: School (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1170169346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170169345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1982424510}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1170169347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170169345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af2f663ef97e649f9c8abce08395aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetBuilding: 1
+  triggerBuilding: 0
+  proximityBuildings: 05000000
+  expireLimit: 3
+  characters:
+  - Betsy
+  triggerMessages:
+  - character: Betsy
+    tweet:
+      header: Betsy
+      body: I wish we had more schools near our aparment...
+  successMessages:
+  - character: Betsy
+    tweet:
+      header: Betsy
+      body: We have the best city planner ever! Thank you for valuing education.
+  failureMessages:
+  - character: Betsy
+    tweet:
+      header: Betsy
+      body: I can't believe we don't have enough education for our community.
 --- !u!1 &1171554421
 GameObject:
   m_ObjectHideFlags: 0
@@ -4164,6 +4230,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 10664889114768375}
     - target: {fileID: 1000247956292339986, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1023918831}
+    - target: {fileID: 1000247956292339986, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
       propertyPath: characterArt
       value: 
       objectReference: {fileID: 395565648}
@@ -4499,6 +4569,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1989598149}
+  - {fileID: 1170169346}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4621,7 +4692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetBuilding: 1
-  triggerBuilding: 5
+  triggerBuilding: 0
   proximityBuildings: 05000000
   expireLimit: 3
   characters:
@@ -4997,7 +5068,7 @@ MonoBehaviour:
   dialoguePopup: {fileID: 83838296}
   dialogueContainer: {fileID: 922360000}
   textBoxPrefab: {fileID: 1480471631379342, guid: 7c4a6536bbe9ab7ed9d075297cfe1ecc, type: 3}
-  interval: 40
+  interval: 14
   postSpacing: 5
 --- !u!114 &2080495372
 MonoBehaviour:

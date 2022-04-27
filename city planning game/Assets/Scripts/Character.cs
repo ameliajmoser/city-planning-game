@@ -34,6 +34,8 @@ public class Character
     private int questsPassed = 0;
     private int questsFailed = 0;
 
+    private List<string> triggeredKeys;
+
     public Character( string fileName )
     {
         mFileName = fileName;
@@ -41,6 +43,8 @@ public class Character
         randomTweets = new List<Tweet>();
         goodTweets = new List<Tweet>();
         badTweets = new List<Tweet>();
+
+        triggeredKeys = new List<string>();
 
         dialogueDict = new Dictionary<string, Dialogue>();
 
@@ -135,5 +139,61 @@ public class Character
     public Sprite GetProfileArt()
     {
         return ( profileArt );
+    }
+
+    public string GetDialogueKey()
+    {
+        int total = questsPassed + questsFailed;
+
+        if ( total == 0 )
+        {
+            return null;
+        }
+
+        float percentage = (float) questsPassed / total;
+        if ( percentage < 0.75 )
+        {
+            // We have failed
+            if ( total == 1 )
+            {
+                if ( triggeredKeys.Contains( "Fail1" ) )
+                {
+                    return null;
+                }
+
+                triggeredKeys.Add( "Fail1" );
+                return "Fail1";
+            }
+            else if ( total == 2 )
+            {
+                if ( triggeredKeys.Contains( "Fail2" ) )
+                {
+                    return null;
+                }
+
+                triggeredKeys.Add( "Fail2" );
+                return "Fail2";   
+            }
+        }
+
+        return null;
+    }
+
+    public string GetEndingDialogueKey()
+    {
+        int total = questsPassed + questsFailed;
+
+        if ( total == 0 )
+        {
+            return null;
+        }
+
+        float percentage = (float) questsPassed / total;
+        if ( percentage < 0.75 )
+        {
+            return "BadEnding";
+        }
+
+        return "GoodEnding";
     }
 }

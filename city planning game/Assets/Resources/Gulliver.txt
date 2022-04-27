@@ -30,5 +30,19 @@
 		        </slide>
             </dialogue>
         </entry>
+        <entry>
+            <key>Introduction</key>
+            <dialogue>
+		        <slide>
+                    Well hello there city planner! My cousin, the Mayor, is a bit busy these days, but he wanted to check in on you and make sure everything is up and running smoothly.
+		        </slide>
+                <slide>
+                    I’m the head of Oyle Enterprises and we’ve been setting up some new plants in the area to continue fueling and expanding this whole valley here.
+		        </slide>
+                <slide>
+                It looks like you’ve got a pretty good handle on all this so I’ll get out of your way. But just know if you ever run into any issues, I’m always here to help you continue to grow this great city.
+                </slide>
+            </dialogue>
+        </entry>
     </dialogue>
 </character>

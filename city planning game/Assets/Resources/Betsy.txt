@@ -18,4 +18,44 @@
         <bad>
         </bad>
     </tweets>
+    <dialogue>
+        <entry>
+            <key>Fail1</key>
+            <dialogue>
+		        <slide>
+                    Hey there! I just wanted to drop by and express my outrage.
+		        </slide>
+                <slide>
+                    How can you not support education for all.
+		        </slide>
+            </dialogue>
+        </entry>
+        <entry>
+            <key>Fail2</key>
+            <dialogue>
+		        <slide>
+                    Hey there! I just wanted to drop by and express my outrage.
+		        </slide>
+                <slide>
+                    How can you not support education for all.
+		        </slide>
+            </dialogue>
+        </entry>
+        <entry>
+            <key>GoodEnding</key>
+            <dialogue>
+		        <slide>
+                    We have education for everyone! Our future looks bright!
+		        </slide>
+            </dialogue>
+        </entry>
+        <entry>
+            <key>BadEnding</key>
+            <dialogue>
+		        <slide>
+                    I'm moving out of this town! I can't believe I can't find good education for my kids and community! I suggest everyone joins me in leaving!
+		        </slide>
+            </dialogue>
+        </entry>
+    </dialogue>
 </character>
