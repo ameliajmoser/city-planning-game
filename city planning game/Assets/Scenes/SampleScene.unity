@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44708014, g: 0.4969833, b: 0.575102, a: 1}
+  m_IndirectSpecularColor: {r: 0.44707966, g: 0.49698246, b: 0.57510084, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -725,7 +725,7 @@ MonoBehaviour:
   - {fileID: 2008035343353864571, guid: b6ae8d325d38f224eb3be3d663c33b0b, type: 3}
   - {fileID: 2008035343353864571, guid: e1bfeee40f8ad2c4e985ec6b47009d5b, type: 3}
   MAX_INVENTORY_SIZE: 7
-  oilRigPrefab: {fileID: 2008035343353864571, guid: 530a48ff36318d846a61a341fd303313, type: 3}
+  oilRigPrefab: {fileID: 2008035343353864571, guid: ae99347be2cb34d5c8fb53c68a48db3f, type: 3}
 --- !u!1 &227363472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,7 +1404,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.000647615}
+  m_AnchoredPosition: {x: 0, y: -0.00077350735}
   m_SizeDelta: {x: 0, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &922360002
