@@ -269,7 +269,8 @@ public class GameManager : MonoBehaviour
         int cost = building.cost;
         int playerScore = playerManager.GetComponent<PlayerManager>().GetScore();
 
-        return ( cost <= playerScore );
+        // return ( cost <= playerScore );
+        return ( true );
     }
 
     // private void PlaceGameObject(GameObject obj, Vector3 pos){
