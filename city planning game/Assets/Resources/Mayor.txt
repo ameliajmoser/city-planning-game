@@ -4,16 +4,16 @@
     <tweets>
         <random>
             <tweet>
-                What a great day to be in our great city on our great river!
+                What a great day to be in our great city!
             </tweet>
             <tweet>
-                Make sure to get your votes in for city mascot! The vote ends tomorrow!
+                Make sure to get your votes in for city mascot! Voting ends tomorrow
             </tweet>
             <tweet>
-                Great news folks. Just got word a couple major companies are building here soon! 
+                Great news folks. I just got word a few major companies are building here soon! 
             </tweet>
             <tweet>
-                Make sure to make it to the town hall this weekend. We want to hear each of your voices!
+                My son just got me this new smarty-phone thing. #cool
             </tweet>
         </random>
         <good>

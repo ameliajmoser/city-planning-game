@@ -42,17 +42,23 @@ public class DialogueManager : MonoBehaviour {
 		// Init characters
 		characters = new List<Character>();
 		// The string we pass to characters is the xml file name minus the extension
-		characters.Add( new Character( "Steve" ) ); // concerned citizen 1
-		characters.Add( new Character( "David" ) ); // not for profit leader
-		characters.Add( new Character( "Betsy" ) ); // school board president
-		characters.Add( new Character( "Gerald" ) ); // union leader
-		characters.Add( new Character( "Mayor" ) ); //mayor marshall
-		characters.Add( new Character( "Gulliver" ) ); // oil baron
-		characters.Add( new Character( "Nancy" ) ); // concerned citizen 2
-		characters.Add( new Character( "Marcia" ) ); // celebrity 1
-		characters.Add( new Character( "Mark" ) ); //tech guy
-		characters.Add( new Character( "Weather-Channel" ) ); // city weather channel
-		characters.Add( new Character( "Sports-Channel" ) ); // city sports channel
+
+		// Dialogue Interactions
+		characters.Add( new Character( "David" ) ); // union leader 
+		characters.Add( new Character( "Betsy" ) ); // school board president 
+		characters.Add( new Character( "Mayor" ) ); //mayor marshall 
+		characters.Add( new Character( "Gulliver" ) ); // oil baron 
+
+		// Only for social media
+		characters.Add( new Character( "Marcia" ) ); // random citizen (mother)
+		characters.Add( new Character( "Mark" ) ); // random citizen (tech guy)
+		characters.Add( new Character( "Weather-Channel" ) ); // city weather channel 
+		characters.Add( new Character( "Sports-Channel" ) ); // city sports channel 
+
+		// REMOVED
+		// characters.Add( new Character( "Gerald" ) );
+		// characters.Add( new Character( "Nancy" ) );
+		// characters.Add( new Character( "Steve" ) );  
 		characters.Add( new Character( "Blank" ) );
 
 		// Messages

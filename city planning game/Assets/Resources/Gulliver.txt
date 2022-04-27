@@ -4,13 +4,13 @@
     <tweets>
         <random>
             <tweet>
-                Don't let the activists fool you. Oil plants aren't harmful and they put money in all our pockets!
+                Oh the sweet sweet smell of progress. 
             </tweet>
             <tweet>
                 Met with the Mayor today about building more plants. Our city's future has never looked brighter!
             </tweet>
             <tweet>
-                I strolled around the city today. It's great to see it expanding so quickly!
+                Strolled around the city today. It's great to see it expanding so quickly!
             </tweet>
         </random>
         <good>

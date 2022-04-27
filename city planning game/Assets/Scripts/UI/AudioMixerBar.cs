@@ -22,6 +22,6 @@ public class AudioMixerBar : MonoBehaviour
     public void ChangeMixerBusValue()
     {
         bus.setVolume(slider.value);
-        PlayerPrefs.SetFloat("FMOD Bus-" + busPath, slider.value);s
+        PlayerPrefs.SetFloat("FMOD Bus-" + busPath, slider.value);
     }
 }

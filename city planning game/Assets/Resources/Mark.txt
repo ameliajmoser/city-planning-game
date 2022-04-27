@@ -4,16 +4,16 @@
     <tweets>
         <random>
             <tweet>
-                Opening up a new office tower soon. Come work for the best tech company around!
+                Opening up a new office tower soon - come work for the best tech company around!
             </tweet>
             <tweet>
                 Launching the new GrapePhone tomorrow! Make sure to get to stores early before they sell out!
             </tweet>
             <tweet>
-                I know I'm new to the city, but I love it and love being one of you. My new home out on mansion boulevard is almost done!
+                Started this company in my dorm room and now look at us
             </tweet>
             <tweet>
-                Started this company in my dorm room and now we're here. Look what a bit of money and quick growth can do!!
+                SprawlCoin to the mooooon!!!
             </tweet>
         </random>
         <good>

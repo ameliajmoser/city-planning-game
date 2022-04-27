@@ -4,10 +4,13 @@
     <tweets>
         <random>
             <tweet>
-                Swipe up to help Save the Turtles!!
+                Think I'll walk around the city today. so many new buildings to see
             </tweet>
             <tweet>
-                My new movie premieres tonight! Make sure to to get out and see it.
+                My son is trying out for the baseball team!
+            </tweet>
+            <tweet>
+                My daughter would love to meet up with other girls for crafts and games!
             </tweet>
         </random>
         <good>
