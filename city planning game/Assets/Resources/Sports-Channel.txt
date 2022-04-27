@@ -1,6 +1,6 @@
 <character>
     <name>Sports Channel</name>
-    <sprite>tmp</sprite>
+    <sprite>sports</sprite>
     <tweets>
         <random>
             <tweet>

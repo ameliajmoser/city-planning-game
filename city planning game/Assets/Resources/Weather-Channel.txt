@@ -1,6 +1,6 @@
 <character>
     <name>Weather Channel</name>
-    <sprite>tmp</sprite>
+    <sprite>weather</sprite>
     <tweets>
         <random>
             <tweet>
