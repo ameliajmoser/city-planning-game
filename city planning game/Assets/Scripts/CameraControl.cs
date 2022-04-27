@@ -30,6 +30,9 @@ public class CameraControl : MonoBehaviour
 
     private int UILayer;
 
+    public DialoguePopup dialoguePopup;
+    public PauseMenu pauseMenu;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +50,9 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If paused or in dialogue, don't move
+        if (dialoguePopup.IsOpen() || pauseMenu.IsPaused()) { return; }
+        
         // Get target position to rotate around
         if ( target == null ) {
             targetPos = Vector3.zero;
@@ -100,6 +106,9 @@ public class CameraControl : MonoBehaviour
     }
 
     void LateUpdate() {
+        // If paused or in dialogue, don't move
+        if (dialoguePopup.IsOpen() || pauseMenu.IsPaused()) { return; }
+
         // Get horizontal input
         float rotateInput = Input.GetAxis("Rotate") * angularSpeed * Time.deltaTime;
 

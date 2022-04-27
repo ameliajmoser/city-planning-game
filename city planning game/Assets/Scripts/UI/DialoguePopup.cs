@@ -18,6 +18,9 @@ public class DialoguePopup : MonoBehaviour
     [SerializeField]
     private UITransitionManager[] transitionList;
 
+    [SerializeField]
+    private PauseMenu pauseMenu;
+
     private List<string> slides;
     private bool dialogueOpen;
     private int currentSlide;
@@ -49,7 +52,7 @@ public class DialoguePopup : MonoBehaviour
 
     void Update() { // I'd like to move this out of update into like a coroutine or something but it's fine for now
         if (dialogueOpen) {
-            if(Input.anyKeyDown) {
+            if(Input.anyKeyDown && !pauseMenu.IsPaused() && !Input.GetKeyDown(KeyCode.Escape)) {
                 if (currentSlide < slides.Count - 1) {
                     currentSlide++;
                     bodyText.text = slides[currentSlide];

@@ -16,7 +16,6 @@ public class MainMenu : MonoBehaviour
 
     public void ClickPlayButton()
     {
-        Debug.Log("play");
         foreach(UITransitionManager transition in transitionList)
         {
             transition.TriggerTransition("Play");
@@ -25,7 +24,6 @@ public class MainMenu : MonoBehaviour
 
     public void ClickOptionsButton()
     {
-        Debug.Log("options");
         foreach(UITransitionManager transition in transitionList)
         {
             transition.TriggerTransition("Options");
@@ -34,7 +32,6 @@ public class MainMenu : MonoBehaviour
 
     public void ClickBackButton()
     {
-        Debug.Log("back");
         foreach(UITransitionManager transition in transitionList)
         {
             transition.TriggerTransition("Back");
@@ -43,13 +40,11 @@ public class MainMenu : MonoBehaviour
 
     public void ClickQuitButton()
     {
-        Debug.Log("quit");
         Application.Quit();
     }
 
     public void LoadPlayScene()
     {
-        Debug.Log("load");
         SceneManager.LoadScene("SampleScene");
     }
 }

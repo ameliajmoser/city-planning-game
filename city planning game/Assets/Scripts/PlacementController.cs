@@ -23,13 +23,7 @@ public class PlacementController : MonoBehaviour
     {
         if ( Input.GetKeyDown( KeyCode.Escape )  || Input.GetKeyDown(KeyCode.Mouse1))
         {
-            if ( currentPlaceableObject )
-            {
-                var building = currentPlaceableObject.GetComponent<Building>();
-                building.ClearIndicators();
-
-                Destroy( currentPlaceableObject );
-            }
+            DeselectBuilding();
         }
 
         if (currentPlaceableObject != null)
@@ -81,6 +75,16 @@ public class PlacementController : MonoBehaviour
                 gameManager.GetComponent<GameManager>().updateQuests();
                 gameManager.GetComponent<GameManager>().checkQuests( building.buildingType, building.getActiveBuildings() );
             }
+        }
+    }
+
+    public void DeselectBuilding() {
+        if ( currentPlaceableObject )
+        {
+            var building = currentPlaceableObject.GetComponent<Building>();
+            building.ClearIndicators();
+
+            Destroy( currentPlaceableObject );
         }
     }
 
