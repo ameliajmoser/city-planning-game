@@ -722,7 +722,7 @@ MonoBehaviour:
     scaleEnd: 0
     includeAlpha: 1
     alphaEnd: 0
-    includePostCallback: 0
+    includePostCallback: 1
     onTransitionFinish:
       m_PersistentCalls:
         m_Calls:
@@ -746,7 +746,7 @@ MonoBehaviour:
     scaleEnd: 0
     includeAlpha: 1
     alphaEnd: 1
-    includePostCallback: 0
+    includePostCallback: 1
     onTransitionFinish:
       m_PersistentCalls:
         m_Calls:
@@ -4119,6 +4119,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 10205535}
     m_Modifications:
+    - target: {fileID: 911508737963743838, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 911508737963743838, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 911508737963743838, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 549133905}
+    - target: {fileID: 911508737963743838, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 911508737963743838, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_blocksRaycasts
+      objectReference: {fileID: 0}
+    - target: {fileID: 911508737963743838, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: DeselectBuilding
+      objectReference: {fileID: 0}
+    - target: {fileID: 911508737963743838, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PlacementController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 911508737963743838, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 911508737963743838, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1000247956292339986, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
       propertyPath: character
       value: 
@@ -4136,12 +4172,44 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 128530071}
     - target: {fileID: 3691957273088334045, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691957273088334045, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691957273088334045, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 549133905}
+    - target: {fileID: 3691957273088334045, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
       propertyPath: _transitionList.Array.data[1].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 128530071}
     - target: {fileID: 3691957273088334045, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691957273088334045, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DeselectBuilding
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691957273088334045, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[1].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_blocksRaycasts
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691957273088334045, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
       propertyPath: _transitionList.Array.data[1].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: TriggerTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691957273088334045, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlacementController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691957273088334045, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
+      propertyPath: _transitionList.Array.data[0].onTransitionFinish.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5549677100243468878, guid: bbf014377dc810744a1a899f532b89c1, type: 3}
       propertyPath: m_Name
@@ -5215,6 +5283,18 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: SecondaryPause
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 549133905}
+          m_TargetAssemblyTypeName: PlacementController, Assembly-CSharp
+          m_MethodName: DeselectBuilding
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
   - name: SecondaryUnpause

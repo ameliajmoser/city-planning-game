@@ -411,7 +411,7 @@ CanvasGroup:
   m_GameObject: {fileID: 5549677100243468878}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 0
+  m_Interactable: 1
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &1000247956292339986
@@ -428,10 +428,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 3923840443682482535}
   bodyText: {fileID: 331997339816431118}
+  characterArt: {fileID: 0}
   transitionList:
   - {fileID: 911508737963743838}
   - {fileID: 3691957273088334045}
   - {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!114 &911508737963743838
 MonoBehaviour:
   m_ObjectHideFlags: 0
