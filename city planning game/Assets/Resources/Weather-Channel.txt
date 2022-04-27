@@ -4,7 +4,7 @@
     <tweets>
         <random>
             <tweet>
-                What a great day it is to be in CITY BUILDER!
+                What a great day it is to be in Sprawl!
             </tweet>
             <tweet>
                 It's sunny and 75 and is likely to stay that way all week folks. Enjoy it while you can!
@@ -17,9 +17,6 @@
             </tweet>
             <tweet>
                 We're tracking a small storm moving in from the south but it should slip right by us.
-            </tweet>
-            <tweet>
-                How do you find out the weather when you're on vacation.......go outside and look up! Enjoy the weekend!
             </tweet>
             <tweet>
                 Perfect weather to head to the river during the next few days! Be safe out there folks.
