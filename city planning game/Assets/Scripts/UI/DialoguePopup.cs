@@ -21,6 +21,9 @@ public class DialoguePopup : MonoBehaviour
     [SerializeField]
     private PauseMenu pauseMenu;
 
+    [SerializeField]
+    private GameObject gameManager;
+
     private List<string> slides;
     private bool dialogueOpen;
     private int currentSlide;
@@ -61,6 +64,8 @@ public class DialoguePopup : MonoBehaviour
                         transition.TriggerTransition("EndDialogue");
                         dialogueOpen = false;
                     }
+
+                    gameManager.GetComponent<GameManager>().DialogueOver();
                 }
             }
         }
@@ -69,5 +74,10 @@ public class DialoguePopup : MonoBehaviour
     public bool IsOpen()
     {
         return ( dialogueOpen );
+    }
+
+    public int GetSlideCount()
+    {
+        return slides.Count;
     }
 }

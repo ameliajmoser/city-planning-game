@@ -183,7 +183,7 @@ public class DialogueManager : MonoBehaviour {
 	public Character getCharacter( string name )
 	{
 		foreach( Character character in characters )
-		{	
+		{
 			if ( character.getCharacterName().Equals( name ) )
 			{
 				return character;
@@ -201,5 +201,10 @@ public class DialogueManager : MonoBehaviour {
 	public bool DialoguePopupOpen()
 	{
 		return ( dialoguePopup.IsOpen() );
+	}
+
+	public int GetDialoguePopupSlideCount()
+	{
+		return dialoguePopup.GetSlideCount();
 	}
 }

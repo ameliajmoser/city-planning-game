@@ -115,7 +115,10 @@ public class Quest : MonoBehaviour
 
     public void increaseBuildingsPlaced()
     {
-        buildingsPlaced += 1;
+        if ( triggered )
+        {
+            buildingsPlaced += 1;
+        }
     }
 
     public List<string> getCharacters()
