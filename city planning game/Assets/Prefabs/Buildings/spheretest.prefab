@@ -214,7 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingID: 0
   startPlaced: 0
-  affinityRadius: 20
+  affinityRadius: 15
   affinities:
   - buildingType: 1
     points: 1
@@ -245,7 +245,7 @@ MonoBehaviour:
   - buildingType: 13
     points: 2
   cost: 1
-  rgbd: {fileID: 0}
+  rgbd: {fileID: 6214605086695678209}
   radius: {fileID: 3792663428270404345}
   points: {fileID: 2808886467738296294}
   indicator: {fileID: 1687985137632354586}

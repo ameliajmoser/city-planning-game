@@ -71,7 +71,7 @@ public class Building : MonoBehaviour
         activeBuildings = new List<GameObject>();
 
         // Set radius of sensing radius
-        radius.transform.localScale = new Vector3( affinityRadius * 2, affinityRadius * 2, 0 );
+        radius.transform.localScale = new Vector3( affinityRadius * 2, affinityRadius * 2, affinityRadius*2);
         if (startPlaced){
             this.PlaceBuilding();
         }
