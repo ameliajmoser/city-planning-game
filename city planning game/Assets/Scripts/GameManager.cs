@@ -74,10 +74,6 @@ public class GameManager : MonoBehaviour
         // dialogueManager.GetComponent<DialogueManager>().QueueDialoguePopup( mayor, "Introduction" );
         dialogueQueue.Add( new DialogueEntry( mayor, "Introduction" ) );
 
-        Character oilBaron = dialogueManager.GetComponent<DialogueManager>().getCharacter( "Gulliver" );
-                // dialogueManager.GetComponent<DialogueManager>().QueueDialoguePopup( oilBaron, "BailOut" );
-                dialogueQueue.Add( new DialogueEntry( oilBaron, "BailOut" ) );
-
         mouseInput.OnMouseDown += HandleMouseClick;
         quests = new List<GameObject>();
         finishedQuests = new List<GameObject>();
