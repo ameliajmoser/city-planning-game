@@ -7,14 +7,26 @@
                 What a great day to be in our great city!
             </tweet>
             <tweet>
-                Make sure to get your votes in for city mascot! Voting ends tomorrow
+                Make sure to get your votes in for city mascot! Voting ends tomorrow!
             </tweet>
             <tweet>
                 Great news folks. I just got word a few major companies are building here soon! 
             </tweet>
             <tweet>
-                My son just got me this new smarty-phone thing. #cool
+                My nephew just got me one of these new "smart phones" thing. #cool !
             </tweet>
+		<tweet>
+                	DOES ANYONE KNOW HOW TO DISABLE CAPS LOCK IM USING A SMART PHONE
+            	</tweet>
+		<tweet>
+                	Haha!!! Check out this hilarious image my nephew sent me! C://Users/WilsonFamily/Pictures/IMG_0451.jpg
+            	</tweet>
+		<tweet>
+                	There have been so many ribbon cuttings lately, I think I need to sharpen my oversized scissors!
+            	</tweet>
+		<tweet>
+                	They don't tell you this in school, but this mayoring business is hard work! These old bones need a rest.
+            	</tweet>
         </random>
         <good>
         </good>
@@ -31,6 +43,9 @@
                 <slide>
                     Now I can't begin to understand it, but apparently this here simulation lets you plan our city. We send you the building proposals, you plonk 'em down as you see fit, and they get built! What a time to be alive!
 		        </slide>
+		<slide>
+                    You can navigate the world with your "WASD" keys, rotate with Q and E, and zoom with your "SCROLLWHEEL." Drop buildings with "RIGHT CLICK" and rotate them with "SCROLLWHEEL."
+		        </slide>
                 <slide>
                     Those geniuses streamlined all the boring old political and budgetary concerns into those POINTS. So you can just focus on the planning, and make sure you get enough for the next round of proposals.
 		        </slide>
@@ -46,14 +61,18 @@
             <key>Failure</key>
             <dialogue>
 		        <slide>
-                    Oh no! The city has run out of funds for development!
+                    I didn't want to be the one to tell you this, but... aw shucks. It looks like our budget has run thin for this period.
 		        </slide>
                 <slide>
-                    I guess this is how big our city will get.
+                    It's nothing personal, but with how tight things are getting we're gonna have to cut this experimental planning program.
 		        </slide>
                 <slide>
-                    Better luck next time kid.
+                    I was hopin' to retire soon but it looks like I'll be holding down the fort here until things stabilize.
 		        </slide>
+		<slide>
+                    As for you, kid... I guess you'll have to find work elsewhere.
+		        </slide>
+		
             </dialogue>
         </entry>
     </dialogue>

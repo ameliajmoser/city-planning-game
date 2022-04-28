@@ -4,14 +4,35 @@
     <tweets>
         <random>
             <tweet>
-                The summer is fast approaching. Make sure to vote for more school funding for our great summer school programs!
+                The summer is fast approaching. Make sure to vote for more school funding for our great summer school programs! 
             </tweet>
             <tweet>
-                Our school car wash fundraiser its tomorrow! Come stop by and support your local community school!
+                Our school car wash fundraiser its tomorrow! Come stop by and support your local schools! Casey and Alicia will be there to help :-)
             </tweet>
             <tweet>
                 Too many of our kids are forced to trek across the city just to go to school. We need more schools closer to home!
             </tweet>
+	<tweet>
+                Does anyone know of good national parks nearby? Hoping to take Casey and Olivia on a hike!
+            </tweet>
+	<tweet>
+                There's a powerful stench coming from Casey's room... I worry they're smoking "Vapes" in there! Any #moms know what to do with this??
+            </tweet>
+	<tweet>
+                Olivia just brought home an art project from school.. wow! Van Gogh eat your heart out! 
+	</tweet>
+	<tweet>
+                We may need a second fridge to put up all of these beautiful projects Olivia brings home! :-)
+	</tweet>
+	<tweet>
+                From work, to flute recital, to dentist, to the mall, to home for dinner, to the schoolboard meeting... Need more #coffee!!
+	</tweet>
+	<tweet>
+                I love Casey and Olivia more than anything in the world... but coffee and wine are close behind! :-)
+	</tweet>
+	<tweet>
+                So annoyed by all the grammatical errors on here. When will they let me annotate people's posts with improvements?
+	</tweet>
         </random>
         <good>
         </good>
@@ -23,10 +44,19 @@
             <key>Fail1</key>
             <dialogue>
 		        <slide>
-                    Hey there! I just wanted to drop by and express my outrage.
+				You. You're that new city planner. 
 		        </slide>
-                <slide>
-                    How can you not support education for all.
+                	<slide>
+                    		Don't you think you have a responsibility to this community?
+		        </slide>
+			<slide>
+                    		I brought Casey and Olivia here for a new opportunity. I volunteer on the schoolboard so I can help make their future brighter.
+		        </slide>
+			<slide>
+                    		But when there are no good schools in our area, all of the work I do is in vain.
+		        </slide>
+			<slide>
+                    		Shame on you. Goodbye.
 		        </slide>
             </dialogue>
         </entry>
@@ -34,10 +64,19 @@
             <key>Fail2</key>
             <dialogue>
 		        <slide>
-                    Hey there! I just wanted to drop by and express my outrage.
+				You. You're that new city planner. 
 		        </slide>
-                <slide>
-                    How can you not support education for all.
+                	<slide>
+                    		Don't you think you have a responsibility to this community?
+		        </slide>
+			<slide>
+                    		I brought Casey and Olivia here for a new opportunity. I volunteer on the schoolboard so I can help make their future brighter.
+		        </slide>
+			<slide>
+                    		But when there are no good schools in our area, all of the work I do is in vain.
+		        </slide>
+			<slide>
+                    		Shame on you. Goodbye.
 		        </slide>
             </dialogue>
         </entry>
@@ -45,7 +84,10 @@
             <key>GoodEnding</key>
             <dialogue>
 		        <slide>
-                    We have education for everyone! Our future looks bright!
+                    		Hey! I just wanted to let you know... My daughter Olivia won an art competition at that new school you had built. She got a scholarship to an art camp!
+		        </slide>
+			<slide>
+                    		And my teen Casey has been really enjoying the workshop classes they get there... I've never seen them so engaged with school! I just wanted to thank you for all you've done for this community.
 		        </slide>
             </dialogue>
         </entry>
@@ -53,7 +95,7 @@
             <key>BadEnding</key>
             <dialogue>
 		        <slide>
-                    I'm moving out of this town! I can't believe I can't find good education for my kids and community! I suggest everyone joins me in leaving!
+                    		That's it. I've had enough of giving myself to this town that doesn't care about me, my children, or any other low-income students in my community.
 		        </slide>
             </dialogue>
         </entry>

@@ -15,6 +15,9 @@
             <tweet>
                 SprawlCoin to the mooooon!!!
             </tweet>
+	    <tweet>
+                thinking about buying this app... how does 46 billion sound?
+            </tweet>
         </random>
         <good>
         </good>
