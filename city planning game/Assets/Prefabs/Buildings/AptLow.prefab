@@ -214,7 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingID: 0
   startPlaced: 0
-  affinityRadius: 15
+  affinityRadius: 20
   affinities:
   - buildingType: 1
     points: 1
