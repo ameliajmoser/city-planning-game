@@ -12,6 +12,15 @@
             <tweet>
                 What happens when they run out of space? Are our homes and schools next to go?!
             </tweet>
+            <tweet>
+                Just got the bill back from my work incident. Two thousand dollars for the ambulance ride?? Healthcare is broken in this country.
+            </tweet>
+            <tweet>
+                The doctor just said if I had reached the hospital ten minutes earlier I might still be able to walk from the injury. Too bad the hospital was across the river.
+            </tweet>
+            <tweet>
+                Meeting for the prospective Local 451 tonight. See you there to support our working-class families!
+            </tweet>
         </random>
         <good>
         </good>
@@ -23,7 +32,7 @@
             <key>Fail1</key>
             <dialogue>
 		        <slide>
-                    I can't believe you aren't supporting health care for your workers! Who do you think builds this place.
+                    Hey, you're that new planner. I know it's easy for you to play with your little simulation, but your choices here really affect people. Think about what you do.
 		        </slide>
             </dialogue>
         </entry>
@@ -38,17 +47,32 @@
         <entry>
             <key>GoodEnding</key>
             <dialogue>
-		        <slide>
-                    Thanks for supporting factories.
-		        </slide>
+		        <slide>	
+                    Hey, I just wanted to stop by and let you know: our organization efforts were a success!	        
+                </slide>
+                <slide>	
+                    Local 451 has secured a contract with Oyle Enterprises here. Included are better protections so things like my leg don't happen again.
+                </slide>
+                <slide>	
+                    Not to mention better wages and time off to spend with our families!
+                </slide>
+                <slide>	
+                    You've done well. I'm glad we have people like you on our side.
+                </slide>
             </dialogue>
         </entry>
         <entry>
             <key>BadEnding</key>
             <dialogue>
 		        <slide>
-                    We workers are going to riot.
+                    This city is deeply broken. Corrupt. Diseased from the inside. We've tried working through the official channels but nobody will listen.
 		        </slide>
+                <slide>
+                    They sacrifice our wellbeing in the name of constant, infinite growth. And you're complicit, planner.
+                </slide>
+                <slide>
+                    Maybe if you had thought more about your decisions we wouldn't be here. There's a crowd outside city hall and they don't think too kindly on you.
+                </slide>
             </dialogue>
         </entry>
     </dialogue>

@@ -43,7 +43,10 @@
                 <slide>
                     Now I can't begin to understand it, but apparently this here simulation lets you plan our city. We send you the building proposals, you plonk 'em down as you see fit, and they get built! What a time to be alive!
 		        </slide>
-		<slide>
+                <slide>
+                    Don't worry about roads, by the way. Apparently it's an early version of the simulation and they're not included... But don't worry, we'll build em.
+                </slide>
+		        <slide>
                     You can navigate the world with your "WASD" keys, rotate with Q and E, and zoom with your "SCROLLWHEEL." Drop buildings with "RIGHT CLICK" and rotate them with "SCROLLWHEEL."
 		        </slide>
                 <slide>
