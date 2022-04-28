@@ -84,6 +84,7 @@ public class Building : MonoBehaviour
         {
             currPoints = ComputeScore();
             points.text = currPoints.ToString();
+            points.color = Color.black;
         }
     }
 
@@ -114,6 +115,10 @@ public class Building : MonoBehaviour
         foreach (var hitBuilding in newActiveBuildings)
         {
             hitBuilding.GetComponent<Building>().indicator.SetActive( true );
+
+            BuildingType type = hitBuilding.GetComponent<Building>().buildingType;
+            hitBuilding.GetComponent<Building>().setScore( GetBuildingAffinity( type ) );
+            hitBuilding.GetComponent<Building>().points.enabled = true;
         }
 
         activeBuildings = newActiveBuildings;
@@ -169,6 +174,10 @@ public class Building : MonoBehaviour
         foreach (var hitBuilding in activeBuildings)
         {
             hitBuilding.GetComponent<Building>().indicator.SetActive( false );
+
+            hitBuilding.GetComponent<Building>().points.text = "0";
+            hitBuilding.GetComponent<Building>().points.color = Color.black;
+            hitBuilding.GetComponent<Building>().points.enabled = false;
         }
     }
 
@@ -205,5 +214,19 @@ public class Building : MonoBehaviour
             }
         }
         return resultString;
+    }
+
+    public void setScore( int score )
+    {
+        points.text = score.ToString();
+
+        if ( score < 0 )
+        {
+            points.color = Color.red;
+        }
+        else
+        {
+            points.color = Color.black;
+        }
     }
 }
