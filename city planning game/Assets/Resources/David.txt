@@ -18,4 +18,38 @@
         <bad>
         </bad>
     </tweets>
+    <dialogue>
+        <entry>
+            <key>Fail1</key>
+            <dialogue>
+		        <slide>
+                    I can't believe you aren't supporting health care for your workers! Who do you think builds this place.
+		        </slide>
+            </dialogue>
+        </entry>
+        <entry>
+            <key>Fail2</key>
+            <dialogue>
+		        <slide>
+				    Thanks to you I have to drive all the way out to my job at the factory. I can't spend any time with my family!
+                </slide>
+            </dialogue>
+        </entry>
+        <entry>
+            <key>GoodEnding</key>
+            <dialogue>
+		        <slide>
+                    Thanks for supporting factories.
+		        </slide>
+            </dialogue>
+        </entry>
+        <entry>
+            <key>BadEnding</key>
+            <dialogue>
+		        <slide>
+                    We workers are going to riot.
+		        </slide>
+            </dialogue>
+        </entry>
+    </dialogue>
 </character>
