@@ -4,10 +4,10 @@
     <tweets>
         <random>
             <tweet>
-                There's a walk at city hall tonight to discuss poor working conditions. Would love to see you there!
+                There's a march at city hall tonight to discuss poor working conditions. Would love to see you there!
             </tweet>
             <tweet>
-                We need sustainability! That means decent housing and work sites!!
+                We need sustainability! That means decent housing and work sites!
             </tweet>
             <tweet>
                 What happens when they run out of space? Are our homes and schools next to go?!

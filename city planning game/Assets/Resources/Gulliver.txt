@@ -4,10 +4,10 @@
     <tweets>
         <random>
             <tweet>
-                Oh the sweet sweet smell of progress. 
+                Oh, the sweet smell of progress.... 
             </tweet>
             <tweet>
-                Met with the Mayor today about building more plants. Our city's future has never looked brighter!
+                Met with the Mayor today about building more plants. This city's future has never looked brighter!
             </tweet>
             <tweet>
                 Strolled around the city today. It's great to see it expanding so quickly!
@@ -23,10 +23,13 @@
             <key>BailOut</key>
             <dialogue>
 		        <slide>
-                    Got a call from Mayor Marshall saying city-development has mostly stalled out due to lack of funding.
+                    Hey there, friend. Got a call from Mayor Marshall saying city development has mostly stalled out due to lack of funding.
 		        </slide>
                 <slide>
-                    Tell you what, if you okay the building of one more oil plant, I’ll make sure they get you the returns to keep developing the city.
+                    Tell you what, if you rubber-stamp this next oil plant, I'll make sure we grease the wheels a little bit. 
+		        </slide>
+		<slide>
+                    Don't you worry about folks putting up a stink. Some of these townspeople don't know what's best for 'em. I know you'll do the right thing, friend.
 		        </slide>
             </dialogue>
         </entry>
@@ -39,8 +42,11 @@
                 <slide>
                     I’m the head of Oyle Enterprises and we’ve been setting up some new plants in the area to continue fueling and expanding this whole valley here.
 		        </slide>
+		<slide>
+                    We helped fund this shiny new planning program, so I s'pose you have me to thank for your job there, hahaha!
+		        </slide>
                 <slide>
-                It looks like you’ve got a pretty good handle on all this so I’ll get out of your way. But just know if you ever run into any issues, I’m always here to help you continue to grow this great city.
+                It looks like you’ve got a pretty good handle on all this so I’ll just see myself out. But just know if you ever run into any issues, I’ll always be here as a..... helping hand.
                 </slide>
             </dialogue>
         </entry>
