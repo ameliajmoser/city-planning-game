@@ -74,6 +74,10 @@ public class GameManager : MonoBehaviour
         // dialogueManager.GetComponent<DialogueManager>().QueueDialoguePopup( mayor, "Introduction" );
         dialogueQueue.Add( new DialogueEntry( mayor, "Introduction" ) );
 
+        Character oilBaron = dialogueManager.GetComponent<DialogueManager>().getCharacter( "Gulliver" );
+                // dialogueManager.GetComponent<DialogueManager>().QueueDialoguePopup( oilBaron, "BailOut" );
+                dialogueQueue.Add( new DialogueEntry( oilBaron, "BailOut" ) );
+
         mouseInput.OnMouseDown += HandleMouseClick;
         quests = new List<GameObject>();
         finishedQuests = new List<GameObject>();
@@ -367,12 +371,18 @@ public class GameManager : MonoBehaviour
 
     public void DialogueOver()
     {
-        inDialogue = false;
+        // inDialogue = false;
+        Invoke("SetDialogueOver", 2.0f); // Do this to handle thread stuff :(
 
         if ( dialogueQueue.Count > 0 )
         {
             dialogueQueue.RemoveAt( 0 );
         }
+    }
+
+    public void SetDialogueOver()
+    {
+        inDialogue = false;
     }
 
     // private void PlaceGameObject(GameObject obj, Vector3 pos){
