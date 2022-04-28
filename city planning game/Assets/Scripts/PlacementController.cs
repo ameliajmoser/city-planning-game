@@ -40,7 +40,7 @@ public class PlacementController : MonoBehaviour
 
         RaycastHit hitInfo;
         int layerMask = LayerMask.GetMask("Ground") | LayerMask.GetMask("Water");
-        if (Physics.Raycast(ray, out hitInfo, 100.0f, layerMask))
+        if (Physics.Raycast(ray, out hitInfo, 300.0f, layerMask))
         {
             currentPlaceableObject.transform.position = hitInfo.point;
         }
